@@ -27,7 +27,7 @@ public class Main {
         response.redirect("/login");
       }
     });
-
+/*
     before("/ingresar/*", (request, response) -> {
       if (request.session().attribute("user") == null) {
         response.redirect("/login");
@@ -53,12 +53,12 @@ public class Main {
       res.redirect("/login");
       return "Goodbye!";
     });
-
+*/
     get("/", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
       return new ModelAndView(attributes, "index.ftl");
     }, new FreeMarkerEngine());
-
+/*
     get("/login", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
       return new ModelAndView(attributes, "login.ftl");

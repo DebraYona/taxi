@@ -9,16 +9,15 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="description" content="Taxi Redu">
 <meta name="author" content="Coffeecream Themes, info@coffeecream.eu">
-<title>Taxi Feik</title>
+<title>Taxi Redu</title>
 <link rel="shortcut icon" href="images/favicon.png">
 
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-
 <header class="header">
 <div class="top-bar">
-<div class="cont  ainer">
+<div class="container">
 <ul class="social-links">
 <li><a href="http://facebook.com">Facebook</a></li>
 <li><a href="http://twitter.com">Twitter</a></li>
@@ -35,17 +34,17 @@
 </div>
 <div id="nav-bar" class="nav-bar">
 <div class="container">
-<a href="index.html" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
+<a href="index.ftl" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
 <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
 <nav class="main-nav">
   <ul>
-  <li class="active"><a href="index.html">Inicio</a></li>
+  <li class="active"><a href="index.ftl">Inicio</a></li>
   <li><a href="services.html">Servicios</a></li>
   <li><a href="drivers.html">Conductores</a></li>
   <li><a href="cars.html">Carros</a></li>
   <li><a href="garage.html">Garage</a></li>
   <li><a href="locations.html">Localizacion</a></li>
-  <li><a href="index.html#!">Paginas</a>
+  <li><a href="index.ftl#!">Paginas</a>
   <ul>
   <li><a href="about.html">Nosotros</a></li>
   <li><a href="testimonials.html">Testimonials</a></li>
@@ -53,11 +52,11 @@
   <li><a href="blog.html">Blog</a></li>
   <li><a href="contact.html">Contactanos</a></li>
   <li><a href="404.html">Error 404</a></li>
-  <li><a href="index.html#!">Third Level Nav</a>
+  <li><a href="index.ftl#!">Third Level Nav</a>
   <ul>
-<li><a href="locations.html#!">Third Level 1</a></li>
-<li><a href="locations.html#!">Third Level 2</a></li>
-<li><a href="locations.html#!">Third Level 3</a></li>
+<li><a href="#!">Third Level 1</a></li>
+<li><a href="#!">Third Level 2</a></li>
+<li><a href="#!">Third Level 3</a></li>
 </ul>
 </li>
 </ul>
@@ -83,105 +82,74 @@
 
 <div class="content">
 
-<div class="map" id="locations-map">
-</div>
-
-
 <section class="intro">
 <div class="container">
 <div class="row">
 <div class="col-sm-12">
 <div class="title">
-<h1>Localizacion</h1>
-<h6>mira donde estas!</h6>
+<h1>Servicios</h1>
+<h6>Pide tu taxi</h6>
 </div>
 <p class="text-center"><big>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget porttitor massa. Nullam elit turpis, eleifend sit amet felis quis, auctor tempus felis. Vivamus tristique felis est, a scelerisque magna egestas at. Donec ultricies porta ante, vitae rhoncus purus ullamcorper vel. Ut mattis aliquam purus, ac sollicitudin elit porta quis. Aliquam fermentum, nibh scelerisque rutrum ultricies, felis elit commodo nisl, a lacinia dui odio vel velit. Curabitur vitae enim ullamcorper, rutrum dolor eu, pharetra odio.</big></p>
 <hr class="blank">
 </div>
 </div>
-<form class="booking-form">
-
-  <div class="row">
-  <div class="col-sm-3">
-  <fieldset>
-  <input type="text" name="name" placeholder="Nombre" />
-  </fieldset>
-  <fieldset>
-  <input type="text" name="email" placeholder="Telefono" />
-  </fieldset>
-  </div>
-  <div class="col-sm-3">
-  <fieldset>
-  <input type="text" name="from" placeholder="Desde" />
-  </fieldset>
-  <fieldset>
-  <input type="text" name="to" placeholder="Hasta" />
-  </fieldset>
-  </div>
-  <div class="col-sm-3">
-  <fieldset>
-  <input type="text" name="date" placeholder="Fecha" class="datepicker" />
-  </fieldset>
-  <fieldset>
-  <input type="text" name="time" placeholder="Hora" class="timepicker" />
-  </fieldset>
-  </div>
-  <div class="col-sm-3">
-
-  <fieldset>
-  <select name="passengers">
-  <option>Pasageros</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-  <option>9</option>
-  <option>10</option>
-  <option>11</option>
-  <option>12</option>
-  <option>13</option>
-  <option>14</option>
-  <option>15</option>
-  <option>16</option>
-  </select>
-  </fieldset>
-  <fieldset>
-    <select name="pago">
-
-    <option>Tipo de pago</option>
-    <option>Efectivo</option>
-    <option>Tarjeta</option>
-    </select>
-  </fieldset>
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-sm-12">
-  <fieldset>
-  <textarea name="message" placeholder="Mensaje"></textarea>
-  </fieldset>
-  </div>
-   </div>
-  <div class="row">
-  <div class="col-sm-12 text-center">
-  <button class="btn btn-primary">Pedir Ahora</button>
+<div class="row">
+<div class="col-sm-4 text-center">
+<p><i class="icon-road-pin icon-circle icon-big"></i></p>
+<h6>Rutas Locales</h6>
+<p>Donec ut urna imperdiet, rhoncus justo quis, bibendum libero. Sed suscipit diam lectus, faucibus condimentum nibh volutpat sed. Aliquam erat volutpat.</p>
+<p>&nbsp;</p>
+</div>
+<div class="col-sm-4 text-center">
+<p><i class="icon-airplane-1 icon-circle icon-big"></i></p>
+<h6>RECOGIDA EN EL AEROPUERTO</h6>
+<p>Donec ut urna imperdiet, rhoncus justo quis, bibendum libero. Sed suscipit diam lectus, faucibus condimentum nibh volutpat sed. Aliquam erat volutpat.</p>
+<p>&nbsp;</p>
+</div>
+<div class="col-sm-4 text-center">
+<p><i class="icon-business-man-3 icon-circle icon-big"></i></p>
+<h6>VIAJE DE NEGOCIOS</h6>
+<p>Donec ut urna imperdiet, rhoncus justo quis, bibendum libero. Sed suscipit diam lectus, faucibus condimentum nibh volutpat sed. Aliquam erat volutpat.</p>
+<p>&nbsp;</p>
 </div>
 </div>
-</form>
+<div class="row">
+<div class="col-sm-4 text-center">
+<p><i class="icon-car-four-wheel icon-circle icon-big"></i></p>
+<h6> taxi VIP </h6>
+<p>Donec ut urna imperdiet, rhoncus justo quis, bibendum libero. Sed suscipit diam lectus, faucibus condimentum nibh volutpat sed. Aliquam erat volutpat.</p>
+<p>&nbsp;</p>
+</div>
+<div class="col-sm-4 text-center">
+<p><i class="icon-airplane-1 icon-circle icon-big"></i></p>
+<h6>Compras</h6>
+<p>Donec ut urna imperdiet, rhoncus justo quis, bibendum libero. Sed suscipit diam lectus, faucibus condimentum nibh volutpat sed. Aliquam erat volutpat.</p>
+<p>&nbsp;</p>
+</div>
+<div class="col-sm-4 text-center">
+<p><i class="icon-truck-2 icon-circle icon-big"></i></p>
+<h6>Recogidas de verbena</h6>
+<p>Donec ut urna imperdiet, rhoncus justo quis, bibendum libero. Sed suscipit diam lectus, faucibus condimentum nibh volutpat sed. Aliquam erat volutpat.</p>
+<p>&nbsp;</p>
+</div>
+</div>
 </div>
 </section>
 
 
-<section class="promo-phone">
+<section class="promo">
+<img src="images/promo2.jpg" alt="" />
+<div class="tint from-left"></div>
 <div class="container">
 <div class="row">
- <div class="col-sm-12">
-<div class="promo-phone-subtitle">LLamanos 24/7</div>
-<div class="promo-phone-title">442-12-10</div>
+<div class="col-sm-5">
+<hgroup>
+<h3>NO ES UNA EMPRESA DE TAXI PROMEDIO</h3>
+<h6>¿POR QUÉ NOSOTROS?</h6>
+</hgroup>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget porttitor massa. Nullam elit turpis, eleifend sit amet felis quis, auctor tempus felis. Vivamus tristique felis est, a scelerisque magna egestas at.</p>
+<a href="about.html" class="btn btn-secondary">Leer mas</a>
 </div>
 </div>
 </div>
@@ -216,13 +184,13 @@
 <div class="widget">
 <h6>Quick links</h6>
 <ul class="quick-links">
-  <li class="active"><a href="index.html">Inicio</a></li>
+  <li class="active"><a href="index.ftl">Inicio</a></li>
   <li><a href="services.html">Servicios</a></li>
   <li><a href="drivers.html">Conductores</a></li>
   <li><a href="cars.html">Carros</a></li>
   <li><a href="garage.html">Garage</a></li>
   <li><a href="locations.html">Localizacion</a></li>
-  <li><a href="index.html#!">Paginas</a>
+  <li><a href="index.ftl#!">Paginas</a>
 <li><a href="jobs.html">Trabajo</a></li>
 <li><a href="blog.html">Blog</a></li>
 <li><a href="contact.html">Contactanos</a></li>
@@ -233,9 +201,9 @@
 <div class="widget">
 <h6>Contact</h6>
 <ul class="contact">
-<li class="hotline"><a href="tel:442-12-10">442-12-10</a></li>
+ <li class="hotline"><a href="tel:442-12-10">442-12-10</a></li>
 <li class="phone"><a href="tel:212-647-0772">212-647-0772</a></li>
-<li class="email"><a href="dalgom@club.com"</li>
+<li class="email"><a href="/cdn-cgi/l/email-protection#e881868e87a89c8990818f9a898a8a8d9ac68a8192"><span class="__cf_email__" data-cfemail="5831363e37182c3920313f2a393a3a3d2a763a3122">[email&#160;protected]</span></a></li>
 <li class="address">4603 Oakwood Avenue<br>New York, 1001</li>
 </ul>
 </div>
@@ -245,7 +213,7 @@
 </div>
 <div class="credits">
 <div class="container">
-<div class="copyright">&copy; 2017 Dalgom Corporation</div>
+<div class="copyright">&copy; 2017 Dalgom Corporations</div>
 <ul class="social-links">
 <li><a href="htp://facebook.com">Facebook</a></li>
 <li><a href="htp://twitter.com">Twitter</a></li>

@@ -350,7 +350,7 @@ public class Main {
 
     get("/ingresar/cliente", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
-      return new ModelAndView(attributes, "index.html");
+      return new ModelAndView(attributes, "index.ftl");
     }, new FreeMarkerEngine());
 
 
@@ -387,7 +387,7 @@ public class Main {
 
     get("/ingresar/conductor", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
-      return new ModelAndView(attributes, "index.html");
+      return new ModelAndView(attributes, "index.ftl");
     }, new FreeMarkerEngine());
 
 

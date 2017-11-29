@@ -7,6 +7,10 @@ public class MySQLFactoryDAO extends FactoryDAO {
         return new  ClienteMYSQLFactoryDAO();
     }
 
+    @Override
+    public ConductorDAO getConductorDAO() {
+        return null;
+    }
 
 
 }

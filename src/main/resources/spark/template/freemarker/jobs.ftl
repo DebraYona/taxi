@@ -35,25 +35,25 @@
 </div>
 <div id="nav-bar" class="nav-bar">
 <div class="container">
-<a href="index.html" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
+<a href="index.ftl" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
 <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
 <nav class="main-nav">
   <ul>
-  <li class="active"><a href="index.html">Inicio</a></li>
-  <li><a href="services.html">Servicios</a></li>
-  <li><a href="drivers.html">Conductores</a></li>
-  <li><a href="cars.html">Carros</a></li>
-  <li><a href="garage.html">Garage</a></li>
-  <li><a href="locations.html">Localizacion</a></li>
-  <li><a href="index.html#!">Paginas</a>
+  <li class="active"><a href="index.ftl">Inicio</a></li>
+  <li><a href="services.ftl">Servicios</a></li>
+  <li><a href="drivers.ftl">Conductores</a></li>
+  <li><a href="cars.ftl">Carros</a></li>
+  <li><a href="garage.ftl">Garage</a></li>
+  <li><a href="locations.ftl">Localizacion</a></li>
+  <li><a href="index.ftl#!">Paginas</a>
   <ul>
   <li><a href="about.html">Nosotros</a></li>
   <li><a href="testimonials.html">Testimonials</a></li>
-  <li><a href="jobs.html">Trabajo</a></li>
+  <li><a href="jobs.ftl">Trabajo</a></li>
   <li><a href="blog.html">Blog</a></li>
-  <li><a href="contact.html">Contactanos</a></li>
+  <li><a href="contact.ftl">Contactanos</a></li>
   <li><a href="404.html">Error 404</a></li>
-  <li><a href="index.html#!">Third Level Nav</a>
+  <li><a href="index.ftl#!">Third Level Nav</a>
   <ul>
 <li><a href="#!">Third Level 1</a></li>
 <li><a href="#!">Third Level 2</a></li>
@@ -100,7 +100,7 @@
 <li class="job-salary">$45,000 - $60,000</li>
 <li class="job-closing">Closing: Dec 29, 2016</li>
 </ul>
-<p><a href="job.html" class="btn btn-primary">Apply for this job</a></p>
+<p><a href="job.ftl" class="btn btn-primary">Apply for this job</a></p>
 </div>
 <div class="job">
 <h4>Marketing specialist</h4>
@@ -110,7 +110,7 @@
 <li class="job-salary">$45,000 - $60,000</li>
 <li class="job-closing">Closing: Dec 29, 2016</li>
 </ul>
-<p><a href="job.html" class="btn btn-primary">Apply for this job</a></p>
+<p><a href="job.ftl" class="btn btn-primary">Apply for this job</a></p>
 </div>
 <div class="job">
 <h4>Call center oficer</h4>
@@ -120,7 +120,7 @@
 <li class="job-salary">$45,000 - $60,000</li>
 <li class="job-closing">Closing: Dec 29, 2016</li>
 </ul>
-<p><a href="job.html" class="btn btn-primary">Apply for this job</a></p>
+<p><a href="job.ftl" class="btn btn-primary">Apply for this job</a></p>
 </div>
  <div class="job">
 <h4>Limousine driver</h4>
@@ -130,7 +130,7 @@
 <li class="job-salary">$45,000 - $60,000</li>
 <li class="job-closing">Closing: Dec 29, 2016</li>
 </ul>
-<p><a href="job.html" class="btn btn-primary">Apply for this job</a></p>
+<p><a href="job.ftl" class="btn btn-primary">Apply for this job</a></p>
 </div>
 
 
@@ -178,16 +178,16 @@
 <div class="widget">
 <h6>Quick links</h6>
 <ul class="quick-links">
-  <li class="active"><a href="index.html">Inicio</a></li>
-  <li><a href="services.html">Servicios</a></li>
-  <li><a href="drivers.html">Conductores</a></li>
-  <li><a href="cars.html">Carros</a></li>
-  <li><a href="garage.html">Garage</a></li>
-  <li><a href="locations.html">Localizacion</a></li>
-  <li><a href="index.html#!">Paginas</a>
-<li><a href="jobs.html">Trabajo</a></li>
+  <li class="active"><a href="index.ftl">Inicio</a></li>
+  <li><a href="services.ftl">Servicios</a></li>
+  <li><a href="drivers.ftl">Conductores</a></li>
+  <li><a href="cars.ftl">Carros</a></li>
+  <li><a href="garage.ftl">Garage</a></li>
+  <li><a href="locations.ftl">Localizacion</a></li>
+  <li><a href="index.ftl#!">Paginas</a>
+<li><a href="jobs.ftl">Trabajo</a></li>
 <li><a href="blog.html">Blog</a></li>
-<li><a href="contact.html">Contactanos</a></li>
+<li><a href="contact.ftl">Contactanos</a></li>
 </ul>
 </div>
 </div>

@@ -35,25 +35,25 @@
 </div>
 <div id="nav-bar" class="nav-bar">
 <div class="container">
-<a href="index.html" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
+<a href="index.ftl" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
 <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
 <nav class="main-nav">
   <ul>
-  <li class="active"><a href="index.html">Inicio</a></li>
-  <li><a href="services.html">Servicios</a></li>
-  <li><a href="drivers.html">Conductores</a></li>
-  <li><a href="cars.html">Carros</a></li>
-  <li><a href="garage.html">Garage</a></li>
-  <li><a href="locations.html">Localizacion</a></li>
-  <li><a href="index.html#!">Paginas</a>
+  <li class="active"><a href="index.ftl">Inicio</a></li>
+  <li><a href="services.ftl">Servicios</a></li>
+  <li><a href="drivers.ftl">Conductores</a></li>
+  <li><a href="cars.ftl">Carros</a></li>
+  <li><a href="garage.ftl">Garage</a></li>
+  <li><a href="locations.ftl">Localizacion</a></li>
+  <li><a href="index.ftl#!">Paginas</a>
   <ul>
   <li><a href="about.html">Nosotros</a></li>
   <li><a href="testimonials.html">Testimonials</a></li>
-  <li><a href="jobs.html">Trabajo</a></li>
+  <li><a href="jobs.ftl">Trabajo</a></li>
   <li><a href="blog.html">Blog</a></li>
-  <li><a href="contact.html">Contactanos</a></li>
+  <li><a href="contact.ftl">Contactanos</a></li>
   <li><a href="404.html">Error 404</a></li>
-  <li><a href="index.html#!">Third Level Nav</a>
+  <li><a href="index.ftl#!">Third Level Nav</a>
   <ul>
 <li><a href="#!">Third Level 1</a></li>
 <li><a href="#!">Third Level 2</a></li>
@@ -88,57 +88,48 @@
 <div class="row">
 <div class="col-sm-12">
 <div class="title">
-<h1>Carros</h1>
-<h6>Registra tu Auto</h6>
+<h1>Taxista</h1>
+<h6>Trabajo tiempo completo</h6>
 </div>
-<p class="text-center"><big>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget porttitor massa. Nullam elit turpis, eleifend sit amet felis quis, auctor tempus felis. Vivamus tristique felis est, a scelerisque magna egestas at. Donec ultricies porta ante, vitae rhoncus purus ullamcorper vel. Ut mattis aliquam purus, ac sollicitudin elit porta quis. Aliquam fermentum, nibh scelerisque rutrum ultricies, felis elit commodo nisl, a lacinia dui odio vel velit. Curabitur vitae enim ullamcorper, rutrum dolor eu, pharetra odio.</big></p>
-<hr class="blank">
-
-<div class="row">
-<div class="col-sm-6">
-
-<fieldset>
-<input type="text" name="placa" placeholder="Numero Placa" />
-</fieldset>
-<fieldset>
-<input type="text" name="conductor" placeholder="Conductor" />
-</fieldset>
 </div>
-
-<div class="col-sm-6">
-
-<fieldset>
-<input type="text" name="year" placeholder="año de Fabricacion" />
-</fieldset>
-<fieldset>
-<input type="text" name="modelo" placeholder="Modelo" />
-</fieldset>
 </div>
 <div class="row">
-<div class="col-sm-12 text-center">
-<button class="btn btn-primary">Registrate Ahora</button>
-
+<div class="col-sm-8">
+<p><img src="images/job.jpg" alt="" class="img-rounded" /></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula sapien at turpis pharetra pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris neque lectus, sollicitudin eu metus nec, vulputate vestibulum mauris. Quisque volutpat dui id metus ornare, quis ultrices risus mollis. Curabitur quis dignissim magna. Vestibulum efficitur posuere mi sit amet placerat. Nullam ullamcorper tempus diam, sit amet congue arcu fringilla at.</p>
+<p>Etiam vel velit at orci facilisis fermentum quis placerat nisl. In blandit euismod posuere. Cras vitae sem vel dolor bibendum aliquam ut volutpat leo. Phasellus sagittis dui eget eros hendrerit pulvinar. Etiam a semper est. Cras commodo lectus lacus, et scelerisque est laoreet vel. Pellentesque et dolor cursus, dignissim est et, tristique dolor. Quisque pellentesque vulputate eros sed scelerisque. Suspendisse congue lorem vitae sodales consequat. Nunc nec ex non felis condimentum luctus.</p>
+<ul class="job-meta">
+<li class="job-salary">$45,000 - $60,000</li>
+<li class="job-closing">Closing: Dec 29, 2016</li>
+</ul>
 </div>
-</section>
-
-
-<section class="promo">
-<img src="images/promo4.jpg" alt="" />
-<div class="tint from-left"></div>
-<div class="container">
-<div class="row">
-<div class="col-sm-5">
-<hgroup>
-<h3>Localizacion</h3>
-<h6>Where you can find us</h6>
-</hgroup>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget porttitor massa. Nullam elit turpis, eleifend sit amet felis quis, auctor tempus felis. Vivamus tristique felis est, a scelerisque magna egestas at.</p>
-<a href="locations.html" class="btn btn-secondary">View our locations</a>
+<div class="col-sm-4">
+<form action="/form/ingresar_conductor" method="POST" id="commentForm">
+<fieldset>
+<input type="text" name="name" placeholder="Nombre" />
+</fieldset>
+<fieldset>
+<input type="text" name="ape" placeholder="Apellidos" />
+</fieldset>
+<fieldset>
+<input type="text" name="nacimiento" placeholder="Fecha de Nacimiento" class="datepicker" />
+</fieldset>
+<fieldset>
+<input type="text" name="licencia" placeholder="Licencia de conducir" />
+</fieldset>
+<fieldset>
+<input type="text" name="caducidad" placeholder="fecha de caducidad" />
+</fieldset>
+<!--
+<fieldset>
+<input type="file" name="resume" />
+</fieldset>-->
+<button class="btn btn-primary">Aplicar para el trabajo</button>
+</form>
 </div>
 </div>
 </div>
 </section>
-
 </div>
 
 
@@ -168,16 +159,16 @@
 <div class="widget">
 <h6>Quick links</h6>
 <ul class="quick-links">
-  <li class="active"><a href="index.html">Inicio</a></li>
-  <li><a href="services.html">Servicios</a></li>
-  <li><a href="drivers.html">Conductores</a></li>
-  <li><a href="cars.html">Carros</a></li>
-  <li><a href="garage.html">Garage</a></li>
-  <li><a href="locations.html">Localizacion</a></li>
-  <li><a href="index.html#!">Paginas</a>
-<li><a href="jobs.html">Trabajo</a></li>
+  <li class="active"><a href="index.ftl">Inicio</a></li>
+  <li><a href="services.ftl">Servicios</a></li>
+  <li><a href="drivers.ftl">Conductores</a></li>
+  <li><a href="cars.ftl">Carros</a></li>
+  <li><a href="garage.ftl">Garage</a></li>
+  <li><a href="locations.ftl">Localizacion</a></li>
+  <li><a href="index.ftl#!">Paginas</a>
+<li><a href="jobs.ftl">Trabajo</a></li>
 <li><a href="blog.html">Blog</a></li>
-<li><a href="contact.html">Contactanos</a></li>
+<li><a href="contact.ftl">Contactanos</a></li>
 </ul>
 </div>
 </div>
@@ -187,7 +178,7 @@
 <ul class="contact">
 <li class="hotline"><a href="tel:442-12-10">442-12-10</a></li>
 <li class="phone"><a href="tel:212-647-0772">212-647-0772</a></li>
-<li class="email"><a href="/cdn-cgi/l/email-protection#1a73747c755a6e7b62737d687b78787f6834787360"><span class="__cf_email__" data-cfemail="4920272f26093d2831202e3b282b2b2c3b672b2033">[email&#160;protected]</span></a></li>
+<li class="email"><a href="/cdn-cgi/l/email-protection#ddb4b3bbb29da9bca5b4baafbcbfbfb8aff3bfb4a7"><span class="__cf_email__" data-cfemail="3a53545c557a4e5b42535d485b58585f4814585340">[email&#160;protected]</span></a></li>
 <li class="address">4603 Oakwood Avenue<br>New York, 1001</li>
 </ul>
 </div>

@@ -347,7 +347,7 @@ public class Main {
     },gson::toJson);
 
 */
-
+    /* Cliente */
     get("/ingresar/cliente", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
       return new ModelAndView(attributes, "index.ftl");
@@ -387,7 +387,7 @@ public class Main {
 
     get("/ingresar/conductor", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
-      return new ModelAndView(attributes, "index.ftl");
+      return new ModelAndView(attributes, "job.ftl");
     }, new FreeMarkerEngine());
 
 
@@ -425,6 +425,42 @@ public class Main {
       return "OK";
     });
 
+    get("/trabajo", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "jobs.ftl");
+    }, new FreeMarkerEngine());
+
+
+    get("/servicios", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "services.ftl");
+    }, new FreeMarkerEngine());
+
+
+    get("/conductores", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "drivers.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/carros", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "cars.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/localizacion", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "locations.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/garaje", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "garage.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/contactanos", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "contact.ftl");
+    }, new FreeMarkerEngine());
 
   }
 

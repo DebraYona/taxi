@@ -12,7 +12,7 @@ public class Connection {
 
     static final String USER = "root";
     static final String PASS = "digimon";
-    static final String DB_URL = "jdbc:mysql://localhost/taxifeik";
+    static final String DB_URL = "jdbc:mysql://localhost/taxi_feik";
 
 
     public Connection() {

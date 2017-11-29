@@ -18,7 +18,7 @@
 
 <header class="header">
 <div class="top-bar">
-<div class="container">
+<div class="cont  ainer">
 <ul class="social-links">
 <li><a href="http://facebook.com">Facebook</a></li>
 <li><a href="http://twitter.com">Twitter</a></li>
@@ -40,24 +40,24 @@
 <nav class="main-nav">
   <ul>
   <li class="active"><a href="index.ftl">Inicio</a></li>
-  <li><a href="services.html">Servicios</a></li>
-  <li><a href="drivers.html">Conductores</a></li>
-  <li><a href="cars.html">Carros</a></li>
-  <li><a href="garage.html">Garage</a></li>
+  <li><a href="services.ftl">Servicios</a></li>
+  <li><a href="drivers.ftl">Conductores</a></li>
+  <li><a href="cars.ftl">Carros</a></li>
+  <li><a href="garage.ftl">Garage</a></li>
   <li><a href="locations.html">Localizacion</a></li>
   <li><a href="index.ftl#!">Paginas</a>
   <ul>
   <li><a href="about.html">Nosotros</a></li>
   <li><a href="testimonials.html">Testimonials</a></li>
-  <li><a href="jobs.html">Trabajo</a></li>
+  <li><a href="jobs.ftl">Trabajo</a></li>
   <li><a href="blog.html">Blog</a></li>
-  <li><a href="contact.html">Contactanos</a></li>
+  <li><a href="contact.ftl">Contactanos</a></li>
   <li><a href="404.html">Error 404</a></li>
   <li><a href="index.ftl#!">Third Level Nav</a>
   <ul>
-<li><a href="#!">Third Level 1</a></li>
-<li><a href="#!">Third Level 2</a></li>
-<li><a href="#!">Third Level 3</a></li>
+<li><a href="locations.html#!">Third Level 1</a></li>
+<li><a href="locations.html#!">Third Level 2</a></li>
+<li><a href="locations.html#!">Third Level 3</a></li>
 </ul>
 </li>
 </ul>
@@ -83,57 +83,105 @@
 
 <div class="content">
 
+<div class="map" id="locations-map">
+</div>
+
+
 <section class="intro">
 <div class="container">
 <div class="row">
 <div class="col-sm-12">
 <div class="title">
-<h1>Carros</h1>
-<h6>Registra tu Auto</h6>
+<h1>Localizacion</h1>
+<h6>mira donde estas!</h6>
 </div>
 <p class="text-center"><big>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget porttitor massa. Nullam elit turpis, eleifend sit amet felis quis, auctor tempus felis. Vivamus tristique felis est, a scelerisque magna egestas at. Donec ultricies porta ante, vitae rhoncus purus ullamcorper vel. Ut mattis aliquam purus, ac sollicitudin elit porta quis. Aliquam fermentum, nibh scelerisque rutrum ultricies, felis elit commodo nisl, a lacinia dui odio vel velit. Curabitur vitae enim ullamcorper, rutrum dolor eu, pharetra odio.</big></p>
 <hr class="blank">
-
-<div class="row">
-<div class="col-sm-6">
-
-<fieldset>
-<input type="text" name="placa" placeholder="Numero Placa" />
-</fieldset>
-<fieldset>
-<input type="text" name="conductor" placeholder="Conductor" />
-</fieldset>
 </div>
-
-<div class="col-sm-6">
-
-<fieldset>
-<input type="text" name="year" placeholder="año de Fabricacion" />
-</fieldset>
-<fieldset>
-<input type="text" name="modelo" placeholder="Modelo" />
-</fieldset>
 </div>
-<div class="row">
-<div class="col-sm-12 text-center">
-<button class="btn btn-primary">Registrate Ahora</button>
+<form class="booking-form">
 
+  <div class="row">
+  <div class="col-sm-3">
+  <fieldset>
+  <input type="text" name="name" placeholder="Nombre" />
+  </fieldset>
+  <fieldset>
+  <input type="text" name="email" placeholder="Telefono" />
+  </fieldset>
+  </div>
+  <div class="col-sm-3">
+  <fieldset>
+  <input type="text" name="from" placeholder="Desde" />
+  </fieldset>
+  <fieldset>
+  <input type="text" name="to" placeholder="Hasta" />
+  </fieldset>
+  </div>
+  <div class="col-sm-3">
+  <fieldset>
+  <input type="text" name="date" placeholder="Fecha" class="datepicker" />
+  </fieldset>
+  <fieldset>
+  <input type="text" name="time" placeholder="Hora" class="timepicker" />
+  </fieldset>
+  </div>
+  <div class="col-sm-3">
+
+  <fieldset>
+  <select name="passengers">
+  <option>Pasageros</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+  <option>16</option>
+  </select>
+  </fieldset>
+  <fieldset>
+    <select name="pago">
+
+    <option>Tipo de pago</option>
+    <option>Efectivo</option>
+    <option>Tarjeta</option>
+    </select>
+  </fieldset>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-12">
+  <fieldset>
+  <textarea name="message" placeholder="Mensaje"></textarea>
+  </fieldset>
+  </div>
+   </div>
+  <div class="row">
+  <div class="col-sm-12 text-center">
+  <button class="btn btn-primary">Pedir Ahora</button>
+</div>
+</div>
+</form>
 </div>
 </section>
 
 
-<section class="promo">
-<img src="images/promo4.jpg" alt="" />
-<div class="tint from-left"></div>
+<section class="promo-phone">
 <div class="container">
 <div class="row">
-<div class="col-sm-5">
-<hgroup>
-<h3>Localizacion</h3>
-<h6>Where you can find us</h6>
-</hgroup>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget porttitor massa. Nullam elit turpis, eleifend sit amet felis quis, auctor tempus felis. Vivamus tristique felis est, a scelerisque magna egestas at.</p>
-<a href="locations.html" class="btn btn-secondary">View our locations</a>
+ <div class="col-sm-12">
+<div class="promo-phone-subtitle">LLamanos 24/7</div>
+<div class="promo-phone-title">442-12-10</div>
 </div>
 </div>
 </div>
@@ -160,7 +208,7 @@
 <div class="row">
 <div class="col-sm-12 col-md-6">
 <div class="widget">
-<h6>About us</h6>
+<h6>Nosotros</h6>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar ante eu lacinia vulputate. Curabitur lacus purus, lacinia non tempor at, condimentum accumsan velit. Nam quis elit a ipsum mattis mattis. In pharetra ultricies massa. Duis vel malesuada odio.</p>
 </div>
 </div>
@@ -169,15 +217,15 @@
 <h6>Quick links</h6>
 <ul class="quick-links">
   <li class="active"><a href="index.ftl">Inicio</a></li>
-  <li><a href="services.html">Servicios</a></li>
-  <li><a href="drivers.html">Conductores</a></li>
-  <li><a href="cars.html">Carros</a></li>
-  <li><a href="garage.html">Garage</a></li>
+  <li><a href="services.ftl">Servicios</a></li>
+  <li><a href="drivers.ftl">Conductores</a></li>
+  <li><a href="cars.ftl">Carros</a></li>
+  <li><a href="garage.ftl">Garage</a></li>
   <li><a href="locations.html">Localizacion</a></li>
   <li><a href="index.ftl#!">Paginas</a>
-<li><a href="jobs.html">Trabajo</a></li>
+<li><a href="jobs.ftl">Trabajo</a></li>
 <li><a href="blog.html">Blog</a></li>
-<li><a href="contact.html">Contactanos</a></li>
+<li><a href="contact.ftl">Contactanos</a></li>
 </ul>
 </div>
 </div>
@@ -187,7 +235,7 @@
 <ul class="contact">
 <li class="hotline"><a href="tel:442-12-10">442-12-10</a></li>
 <li class="phone"><a href="tel:212-647-0772">212-647-0772</a></li>
-<li class="email"><a href="/cdn-cgi/l/email-protection#1a73747c755a6e7b62737d687b78787f6834787360"><span class="__cf_email__" data-cfemail="4920272f26093d2831202e3b282b2b2c3b672b2033">[email&#160;protected]</span></a></li>
+<li class="email"><a href="dalgom@club.com"</li>
 <li class="address">4603 Oakwood Avenue<br>New York, 1001</li>
 </ul>
 </div>
@@ -197,7 +245,7 @@
 </div>
 <div class="credits">
 <div class="container">
-<div class="copyright">&copy; 2017 Dalgom Corporations</div>
+<div class="copyright">&copy; 2017 Dalgom Corporation</div>
 <ul class="social-links">
 <li><a href="htp://facebook.com">Facebook</a></li>
 <li><a href="htp://twitter.com">Twitter</a></li>

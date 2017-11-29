@@ -35,7 +35,7 @@
     </div>
     <div id="nav-bar" class="nav-bar">
         <div class="container">
-            <a href="index.ftl" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
+            <a href="index.ftl" class="logo"><img src="/images/logo.svg" alt="Taxi Redu" /></a>
             <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
             <nav class="main-nav">
                 <ul>
@@ -99,7 +99,7 @@
                 <div class="col-sm-12">
                     <ul class="drivers inline four-columns">
                         <li>
-                            <img src="images/wacho.jpg" alt="" />
+                            <img src="/images/wacho.jpg" alt="" />
                             <h6>Ruby </h6>
                             <p>Audi A4</p>
                             <p>
@@ -117,7 +117,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver02.jpg" alt="" />
+                            <img src="/images/driver02.jpg" alt="" />
                             <h6>Ross Bennett</h6>
                             <p>Peugeot 508</p>
                             <p>
@@ -135,7 +135,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver03.jpg" alt="" />
+                            <img src="/images/driver03.jpg" alt="" />
                             <h6>Tommie Armstrong</h6>
                             <p>Mercedes-Benz S</p>
                             <p>
@@ -153,7 +153,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver04.jpg" alt="" />
+                            <img src="/images/driver04.jpg" alt="" />
                             <h6>Lola Lolita </h6>
                             <p>BMW 320i</p>
                             <p>
@@ -171,7 +171,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver05.jpg" alt="" />
+                            <img src="/images/driver05.jpg" alt="" />
                             <h6>Cody Bailey</h6>
                             <p>BMW 530d</p>
                             <p>
@@ -189,7 +189,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver06.jpg" alt="" />
+                            <img src="/images/driver06.jpg" alt="" />
                             <h6>Dennis Perez</h6>
                             <p>Opel Insignia</p>
                             <p>
@@ -207,7 +207,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver07.jpg" alt="" />
+                            <img src="/images/driver07.jpg" alt="" />
                             <h6>Joel Aguilar</h6>
                             <p>Ford Mondeo</p>
                             <p>
@@ -225,7 +225,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver08.jpg" alt="" />
+                            <img src="/images/driver08.jpg" alt="" />
                             <h6>Willard Lambert</h6>
                             <p>Nissan Qashqai</p>
                             <p>
@@ -243,7 +243,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver01.jpg" alt="" />
+                            <img src="/images/driver01.jpg" alt="" />
                             <h6>Ray Ramsey</h6>
                             <p>Ford Focus C-Max</p>
                             <p>
@@ -261,7 +261,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver10.jpg" alt="" />
+                            <img src="/images/driver10.jpg" alt="" />
                             <h6>Aaron Roberts</h6>
                             <p>Volkswagen Passat</p>
                             <p>
@@ -279,7 +279,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver11.jpg" alt="" />
+                            <img src="/images/driver11.jpg" alt="" />
                             <h6>Joey Holmes</h6>
                             <p>Renault Laguna</p>
                             <p>
@@ -297,7 +297,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="images/driver12.jpg" alt="" />
+                            <img src="/images/driver12.jpg" alt="" />
                             <h6>Terence Bradley</h6>
                             <p>Škoda Octavia</p>
                             <p>
@@ -322,7 +322,7 @@
 
 
     <section class="promo">
-        <img src="images/promo3.jpg" alt="" />
+        <img src="/images/promo3.jpg" alt="" />
         <div class="tint from-left"></div>
         <div class="container">
             <div class="row">
@@ -409,12 +409,12 @@
 
 
 <script src="/cdn-cgi/scripts/0e574bed/cloudflare-static/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/picker.js"></script>
-<script src="js/picker.date.js"></script>
-<script src="js/picker.time.js"></script>
-<script src="js/uber-google-maps.min.js"></script>
-<script src="js/settings.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/picker.js"></script>
+<script src="/js/picker.date.js"></script>
+<script src="/js/picker.time.js"></script>
+<script src="/js/uber-google-maps.min.js"></script>
+<script src="/js/settings.js"></script>
 
 </body>
 </html>

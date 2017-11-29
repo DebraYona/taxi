@@ -35,7 +35,7 @@
 </div>
 <div id="nav-bar" class="nav-bar">
 <div class="container">
-<a href="index.ftl" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
+<a href="index.ftl" class="logo"><img src="/images/logo.svg" alt="Taxi Redu" /></a>
 <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
 <nav class="main-nav">
   <ul>
@@ -257,13 +257,13 @@
 </footer>
 
 
-<script src="js/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/picker.js"></script>
-<script src="js/picker.date.js"></script>
-<script src="js/picker.time.js"></script>
-<script src="js/uber-google-maps.min.js"></script>
-<script src="js/settings.js"></script>
+<script src="/js/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/picker.js"></script>
+<script src="/js/picker.date.js"></script>
+<script src="/js/picker.time.js"></script>
+<script src="/js/uber-google-maps.min.js"></script>
+<script src="/js/settings.js"></script>
 
 </body>
 </html>

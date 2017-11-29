@@ -36,7 +36,7 @@
   </div>
   <div id="nav-bar" class="nav-bar">
     <div class="container">
-      <a href="index.ftl" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
+      <a href="index.ftl" class="logo"><img src="/images/logo.svg" alt="Taxi Redu" /></a>
       <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
       <nav class="main-nav">
         <ul>
@@ -141,7 +141,7 @@
           <hr class="blank">
           <ul class="contacts inline four-columns">
             <li>
-              <img src="images/contact1.jpg" alt="" />
+              <img src="/images/contact1.jpg" alt="" />
               <h6>Marie Strickland</h6>
               <p>General Enquiries</p>
               <p>1-800-400-300</p>
@@ -154,7 +154,7 @@
               </div>
             </li>
             <li>
-              <img src="images/contact2.jpg" alt="" />
+              <img src="/images/contact2.jpg" alt="" />
               <h6>Yvonne Thomas</h6>
               <p>Jobs</p>
               <p>1-800-400-300</p>
@@ -167,7 +167,7 @@
               </div>
             </li>
             <li>
-              <img src="images/contact3.jpg" alt="" />
+              <img src="/images/contact3.jpg" alt="" />
               <h6>Audrey Walton</h6>
               <p>Garage</p>
               <p>1-800-400-300</p>
@@ -180,7 +180,7 @@
               </div>
             </li>
             <li>
-              <img src="images/contact4.jpg" alt="" />
+              <img src="/images/contact4.jpg" alt="" />
               <h6>Marilyn Clark</h6>
               <p>Marketing</p>
               <p>1-800-400-300</p>
@@ -209,35 +209,35 @@
           </div>
           <div class="owl-carousel">
             <div>
-              <img src="images/testimonial1.jpg" alt="" class="person" />
+              <img src="/images/testimonial1.jpg" alt="" class="person" />
               <blockquote>
                 Taxi grabber is exactly what our business has been lacking. Great job, I will definitely be ordering again! Not able to tell you how happy I am with taxi grabber. If you aren’t sure, always go for taxi grabber.
                 <footer>Amanda Reacher, Global Investements</footer>
               </blockquote>
             </div>
             <div>
-              <img src="images/testimonial2.jpg" alt="" class="person" />
+              <img src="/images/testimonial2.jpg" alt="" class="person" />
               <blockquote>
                 Taxi Grabber is the most valuable business resource we have EVER purchased. I couldn't have asked for more than this. After using Taxi Grabber my business skyrocketed!
                 <footer>Robert Bartlett, Buena Vista Garden Maintenance</footer>
               </blockquote>
             </div>
             <div>
-              <img src="images/testimonial3.jpg" alt="" class="person" />
+              <img src="/images/testimonial3.jpg" alt="" class="person" />
               <blockquote>
                 Keep up the excellent work. I would like to personally thank you for your outstanding product. I strongly recommend Taxi Grabber to everyone interested in running a successful business! Not able to tell you how happy I am with Taxi Grabber.
                 <footer>Dolores Garza, Audio Aid</footer>
               </blockquote>
             </div>
             <div>
-              <img src="images/testimonial4.jpg" alt="" class="person" />
+              <img src="/images/testimonial4.jpg" alt="" class="person" />
               <blockquote>
                 Taxi Grabber is the next killer theme. This is simply unbelievable! Man, this thing is getting better and better as I learn more about it. Taxi Grabber is exactly what our business has been lacking.
                 <footer>Louis Rush, Access Asia</footer>
               </blockquote>
             </div>
             <div>
-              <img src="images/testimonial5.jpg" alt="" class="person" />
+              <img src="/images/testimonial5.jpg" alt="" class="person" />
               <blockquote>
                 Definitely worth the investment. I wish I would have thought of it first. Taxi Grabber impressed me on multiple levels.
                 <footer>Florence Schilling, Sunburst Garden Management</footer>
@@ -321,12 +321,12 @@
 
 
 <script src="/cdn-cgi/scripts/0e574bed/cloudflare-static/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/picker.js"></script>
-<script src="js/picker.date.js"></script>
-<script src="js/picker.time.js"></script>
-<script src="js/uber-google-maps.min.js"></script>
-<script src="js/settings.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/picker.js"></script>
+<script src="/js/picker.date.js"></script>
+<script src="/js/picker.time.js"></script>
+<script src="/js/uber-google-maps.min.js"></script>
+<script src="/js/settings.js"></script>
 
 </body>
 </html>

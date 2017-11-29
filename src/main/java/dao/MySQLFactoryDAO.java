@@ -9,7 +9,12 @@ public class MySQLFactoryDAO extends FactoryDAO {
 
     @Override
     public ConductorDAO getConductorDAO() {
-        return null;
+        return new ConductorMYSQLFactoryDAO();
+    }
+
+    @Override
+    public EstadoDAO getEstadoDAO() {
+        return new EstadoMYSQLFactoryDAO();
     }
 
 

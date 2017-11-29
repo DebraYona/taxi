@@ -13,7 +13,7 @@ public class ConductorRequestDraw extends Conductor {
     public ConductorRequestDraw(Request request) throws ParseException {
         this.request = request;
 
-        if(this.request.queryParams("id_Cliente")!=null)
+        if(this.request.queryParams("idConductor")!=null)
             super.setIdConductor(Integer.parseInt(this.request.queryParams("idConductor")));
 
         super.setNombreConductor(this.request.queryParams("nombreConductor"));

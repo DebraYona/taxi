@@ -39,17 +39,17 @@
             <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
             <nav class="main-nav">
                 <ul>
-                    <li class="active"><a href="index.html">Inicio</a></li>
-                    <li><a href="services.ftl">Servicios</a></li>
-                    <li><a href="drivers.ftl">Conductores</a></li>
-                    <li><a href="cars.ftl">Carros</a></li>
-                    <li><a href="garage.ftl">Garage</a></li>
-                    <li><a href="locations.ftl">Localizacion</a></li>
-                    <li><a href="index.html#!">Paginas</a>
+                    <li class="active"><a href="index.ftl">Inicio</a></li>
+                    <li><a href="/services.ftl">servicios</a></li>
+                    <li><a href="/drivers.ftl">conductores</a></li>
+                    <li><a href="/cars.ftl">carros</a></li>
+                    <li><a href="/garage.ftl">garage</a></li>
+                    <li><a href="/locations.ftl">localizacion</a></li>
+                    <li><a href="index.html#!">paginas</a>
                         <ul>
                             <li><a href="about.html">Nosotros</a></li>
                             <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="jobs.ftl">Trabajo</a></li>
+                            <li><a href="/jobs.ftl">trabajo</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="contact.ftl">Contactanos</a></li>
                             <li><a href="404.html">Error 404</a></li>

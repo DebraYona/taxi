@@ -10,9 +10,9 @@
     <meta name="description" content="Taxi Feik">
     <meta name="author" content="Dalgom themes, info@dalgomcream.eu">
     <title>Taxi Feik </title>
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
     </div>
     <div id="nav-bar" class="nav-bar">
         <div class="container">
-            <a href="index.html" class="logo"><img src="images/logo.svg" alt="Taxi Feik" /></a>
+            <a href="index.html" class="logo"><img src="/images/logo.svg" alt="Taxi Feik" /></a>
             <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
             <nav class="main-nav">
                 <ul>
@@ -85,19 +85,19 @@
 
     <div class="slider owl-carousel">
         <div class="slide">
-            <img src="images/slider1.jpg" alt="" class="slider-image" />
+            <img src="/images/slider1.jpg" alt="" class="slider-image" />
             <div class="slider-subtitle">Contactanos 24/7</div>
             <div class="slider-title">442-12-10</div>
             <div class="slider-button"><a href="about.html" class="btn btn-primary">Read more about us</a></div>
         </div>
         <div class="slide">
-            <img src="images/slider2.jpg" alt="" class="slider-image" />
+            <img src="/images/slider2.jpg" alt="" class="slider-image" />
             <div class="slider-subtitle">Only high qualified</div>
             <div class="slider-title">Chauffers</div>
             <div class="slider-button"><a href="drivers.ftl" class="btn btn-primary">Check out our drivers</a></div>
         </div>
         <div class="slide">
-            <img src="images/slider3.jpg" alt="" class="slider-image" />
+            <img src="/images/slider3.jpg" alt="" class="slider-image" />
             <div class="slider-subtitle">Our offer includes</div>
             <div class="slider-title">Servicios</div>
             <div class="slider-button"><a href="services.ftl" class="btn btn-primary">How can we help</a></div>
@@ -393,7 +393,7 @@
                     </div>
                     <div class="owl-carousel">
                         <div>
-                            <img src="images/driver02.jpg" alt="" class="person" />
+                            <img src="/images/driver02.jpg" alt="" class="person" />
                             <blockquote>
                                 Great job, Debra
                                 <footer>Jaime Pariona, Profesor</footer>
@@ -401,28 +401,28 @@
                         </div>
                         <!--
                         <div>
-                        <img src="images/testimonial2.jpg" alt="" class="person" />
+                        <img src="/images/testimonial2.jpg" alt="" class="person" />
                         <blockquote>
                         Taxi Grabber is the most valuable business resource we have EVER purchased. I couldn't have asked for more than this. After using Taxi Grabber my business skyrocketed!
                         <footer>Robert Bartlett, Buena Vista Garden Maintenance</footer>
                         </blockquote>
                         </div>
                         <div>
-                        <img src="images/testimonial3.jpg" alt="" class="person" />
+                        <img src="/images/testimonial3.jpg" alt="" class="person" />
                         <blockquote>
                         Keep up the excellent work. I would like to personally thank you for your outstanding product. I strongly recommend Taxi Grabber to everyone interested in running a successful business! Not able to tell you how happy I am with Taxi Grabber.
                         <footer>Dolores Garza, Audio Aid</footer>
                         </blockquote>
                         </div>
                         <div>
-                        <img src="images/testimonial4.jpg" alt="" class="person" />
+                        <img src="/images/testimonial4.jpg" alt="" class="person" />
                         <blockquote>
                         Taxi Grabber is the next killer theme. This is simply unbelievable! Man, this thing is getting better and better as I learn more about it. Taxi Grabber is exactly what our business has been lacking.
                         <footer>Louis Rush, Access Asia</footer>
                         </blockquote>
                         </div>
                         <div>
-                        <img src="images/testimonial5.jpg" alt="" class="person" />
+                        <img src="/images/testimonial5.jpg" alt="" class="person" />
                         <blockquote>
                         Definitely worth the investment. I wish I would have thought of it first. Taxi Grabber impressed me on multiple levels.
                         <footer>Florence Schilling, Sunburst Garden Management</footer>

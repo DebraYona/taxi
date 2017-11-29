@@ -10,9 +10,9 @@
     <meta name="description" content="Taxi Redu">
     <meta name="author" content="Coffeecream Themes, info@coffeecream.eu">
     <title>Taxi Redu</title>
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -34,7 +34,7 @@
     </div>
     <div id="nav-bar" class="nav-bar">
         <div class="container">
-            <a href="index.ftl" class="logo"><img src="images/logo.svg" alt="Taxi Redu" /></a>
+            <a href="index.ftl" class="logo"><img src="/images/logo.svg" alt="Taxi Redu" /></a>
             <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
             <nav class="main-nav">
                 <ul>
@@ -139,7 +139,7 @@
 
 
     <section class="promo">
-        <img src="images/promo2.jpg" alt="" />
+        <img src="/images/promo2.jpg" alt="" />
         <div class="tint from-left"></div>
         <div class="container">
             <div class="row">
@@ -225,13 +225,13 @@
 </footer>
 
 
-<script src="js/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/picker.js"></script>
-<script src="js/picker.date.js"></script>
-<script src="js/picker.time.js"></script>
-<script src="js/uber-google-maps.min.js"></script>
-<script src="js/settings.js"></script>
+<script src="/js/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/picker.js"></script>
+<script src="/js/picker.date.js"></script>
+<script src="/js/picker.time.js"></script>
+<script src="/js/uber-google-maps.min.js"></script>
+<script src="/js/settings.js"></script>
 
 </body>
 </html>

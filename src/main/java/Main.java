@@ -6,6 +6,8 @@ import spark.ModelAndView;
 import spark.template.freemarker.FreeMarkerEngine;
 import util.DateUtil;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -462,6 +464,23 @@ public class Main {
       return new ModelAndView(attributes, "contact.ftl");
     }, new FreeMarkerEngine());
 
+
+    get("/createdb", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+
+      util.Connection conection =  new util.Connection();
+      try {
+        conection.runCreate("structureTaxi.sql");
+        System.out.println("SQL OK!");
+      } catch (IOException e) {
+        e.printStackTrace();
+      } catch (SQLException e) {
+        e.printStackTrace();
+      }
+      ;
+
+      return new ModelAndView(attributes, "contact.ftl");
+    }, new FreeMarkerEngine());
   }
 
 

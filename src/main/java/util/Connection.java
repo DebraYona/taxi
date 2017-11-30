@@ -1,7 +1,13 @@
 package util;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -37,6 +43,17 @@ public class Connection {
         }
 
     }
+
+    public void runCreate(String fileName) throws IOException, SQLException {
+
+        ScriptRunner runner = new ScriptRunner(this.connection, false, false);
+        Path currentRelativePath = Paths.get("");
+        String s = currentRelativePath.toAbsolutePath().toString();
+        String file = s+"/src/main/resources/db/"+fileName;
+        runner.runScript(new BufferedReader(new FileReader(file)));
+    }
+
+
     public String getURL(){
         return System.getenv("CLEARDB_DATABASE_URL");
     }

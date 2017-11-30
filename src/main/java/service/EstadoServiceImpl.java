@@ -3,6 +3,7 @@ package service;
 import dao.EstadoDAO;
 import dao.FactoryDAO;
 import entity.Conductor;
+import entity.Estado;
 
 import java.util.List;
 
@@ -11,23 +12,24 @@ public class EstadoServiceImpl implements EstadoService {
     FactoryDAO factory = FactoryDAO.getFactory(FactoryDAO.MYSQL_FACTORY);
     EstadoDAO estadoDAO = factory.getEstadoDAO();
 
+
     @Override
-    public int insertarConductor(Conductor conductor) throws Exception {
-        return 0 ;
+    public int insertarEstado(Estado estado) throws Exception {
+        return estadoDAO.insertarEstado(estado);
     }
 
     @Override
-    public List<Conductor> listarConductores() throws Exception {
-        return null;
+    public List<Estado> listarEstado() throws Exception {
+        return estadoDAO.listarEstado();
     }
 
     @Override
-    public int eliminarConductor(int codigo) throws Exception {
-        return 0;
+    public int eliminarEstado(int codigo) throws Exception {
+        return estadoDAO.eliminarEstado(codigo);
     }
 
     @Override
-    public List<Conductor> buscarConductor(Conductor conductor) throws Exception {
-        return null;
+    public List<Estado> buscarEstado(Estado estado) throws Exception {
+        return estadoDAO.buscarEstado(estado);
     }
 }

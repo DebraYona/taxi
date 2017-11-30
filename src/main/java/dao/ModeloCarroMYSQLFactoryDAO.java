@@ -1,26 +1,26 @@
 package dao;
 
-import entity.Conductor;
 import entity.Estado;
+import entity.ModeloCarro;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EstadoMYSQLFactoryDAO implements EstadoDAO {
-
+public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
     private Connection connection = null;
     private Statement stmt = null;
 
     @Override
-    public int insertarEstado(Estado estado) throws Exception {
+    public int insertarModelo(ModeloCarro modelo) throws Exception {
         PreparedStatement ps = null;
         int last = 0;
 
         try {
-            ps = this.connection.prepareStatement("INSERT INTO Estado VALUES (NULL,?)"
+            ps = this.connection.prepareStatement("INSERT INTO ModeloCarro VALUES (NULL,?,?)"
                     , Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, estado.getNombreEstado());
+            ps.setString(1, modelo.getNombreModelo());
+            ps.setString(2, modelo.getDescripcionModelo());
 
 
 
@@ -31,7 +31,7 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
                 last = rs.getInt(1);
             }
 
-            estado.setEstado(last);
+            modelo.setIdModelo(last);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -44,23 +44,24 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
     }
 
     @Override
-    public List<Estado> listarEstado() throws Exception {
+    public List<ModeloCarro> listarModelo() throws Exception {
         Connection connection = null;
         PreparedStatement psmt = null;
-        ArrayList<Estado> listado = new ArrayList<Estado>();
+        ArrayList<ModeloCarro> listado = new ArrayList<ModeloCarro>();
 
 
         try {
             connection = this.connection;
-            psmt = connection.prepareStatement("SELECT * FROM Estado");
+            psmt = connection.prepareStatement("SELECT * FROM ModeloCarro");
             ResultSet rs = psmt.executeQuery();
             while (rs.next()) {
-                Estado estado = new Estado();
-                estado.setEstado(rs.getInt(1));
-                estado.setNombreEstado(rs.getString(2));
+                ModeloCarro modelo = new ModeloCarro();
+                modelo.setIdModelo(rs.getInt(1));
+                modelo.setNombreModelo(rs.getString(2));
+                modelo.setDescripcionModelo(rs.getString(3));
 
 
-                listado.add(estado);
+                listado.add(modelo);
 
             }
 
@@ -80,11 +81,11 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
     }
 
     @Override
-    public int eliminarEstado(int codigo) throws Exception {
+    public int eliminarModelo(int codigo) throws Exception {
         PreparedStatement ps = null;
         int valor;
         try {
-            ps = this.connection.prepareStatement("DELETE  FROM Estado WHERE id = ?");
+            ps = this.connection.prepareStatement("DELETE  FROM ModeloCarro WHERE id = ?");
             ps.setInt(1, codigo);
             valor = ps.executeUpdate();
             if (valor > 0) {
@@ -99,9 +100,7 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
     }
 
     @Override
-    public List<Estado> buscarEstado(Estado estado) throws Exception {
+    public List<ModeloCarro> buscarModelo(ModeloCarro modelo) throws Exception {
         return null;
     }
-
-
 }

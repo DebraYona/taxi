@@ -17,5 +17,10 @@ public class MySQLFactoryDAO extends FactoryDAO {
         return new EstadoMYSQLFactoryDAO();
     }
 
+    @Override
+    public ModeloCarroDAO getModeloCarroDAO() {
+        return new ModeloCarroMYSQLFactoryDAO();
+    }
+
 
 }

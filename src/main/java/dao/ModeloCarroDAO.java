@@ -1,10 +1,11 @@
-package service;
+package dao;
 
+import entity.Estado;
 import entity.ModeloCarro;
 
 import java.util.List;
 
-public interface ModeloCarroService {
+public interface ModeloCarroDAO {
     int insertarModelo(ModeloCarro modelo) throws Exception;
     List<ModeloCarro> listarModelo() throws Exception;
     int eliminarModelo(int codigo) throws Exception;

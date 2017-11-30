@@ -10,6 +10,7 @@ public abstract class FactoryDAO {
     public abstract ClienteDAO getClienteDAO();
     public abstract ConductorDAO getConductorDAO();
     public abstract EstadoDAO getEstadoDAO();
+    public abstract ModeloCarroDAO getModeloCarroDAO();
 
 
     public static FactoryDAO getFactory(int claveFactory){

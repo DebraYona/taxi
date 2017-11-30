@@ -1,26 +1,25 @@
 package dao;
 
-import entity.Conductor;
-import entity.Estado;
+import entity.TipoPago;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EstadoMYSQLFactoryDAO implements EstadoDAO {
-
+public class TipoPagoMYSQLFactoryDAO implements TipoPagoDAO {
     private Connection connection = null;
     private Statement stmt = null;
 
     @Override
-    public int insertarEstado(Estado estado) throws Exception {
+    public int insertarTipo(TipoPago tipoPago) throws Exception {
         PreparedStatement ps = null;
         int last = 0;
 
         try {
-            ps = this.connection.prepareStatement("INSERT INTO Estado VALUES (NULL,?)"
+            ps = this.connection.prepareStatement("INSERT INTO TipoPago VALUES (NULL,?)"
                     , Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, estado.getNombreEstado());
+            ps.setString(1, tipoPago.getNombreTipo());
+
 
 
 
@@ -31,7 +30,7 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
                 last = rs.getInt(1);
             }
 
-            estado.setEstado(last);
+            tipoPago.setIdTipo(last);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -44,23 +43,24 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
     }
 
     @Override
-    public List<Estado> listarEstado() throws Exception {
+    public List<TipoPago> listarTipo() throws Exception {
         Connection connection = null;
         PreparedStatement psmt = null;
-        ArrayList<Estado> listado = new ArrayList<Estado>();
+        ArrayList<TipoPago> listado = new ArrayList<TipoPago>();
 
 
         try {
             connection = this.connection;
-            psmt = connection.prepareStatement("SELECT * FROM Estado");
+            psmt = connection.prepareStatement("SELECT * FROM TipoPago");
             ResultSet rs = psmt.executeQuery();
             while (rs.next()) {
-                Estado estado = new Estado();
-                estado.setEstado(rs.getInt(1));
-                estado.setNombreEstado(rs.getString(2));
+                TipoPago tipoPago = new TipoPago();
+                tipoPago.setIdTipo(rs.getInt(1));
+                tipoPago.setNombreTipo(rs.getString(2));
 
 
-                listado.add(estado);
+
+                listado.add(tipoPago);
 
             }
 
@@ -80,11 +80,11 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
     }
 
     @Override
-    public int eliminarEstado(int codigo) throws Exception {
+    public int eliminarTipo(int codigo) throws Exception {
         PreparedStatement ps = null;
         int valor;
         try {
-            ps = this.connection.prepareStatement("DELETE  FROM Estado WHERE id = ?");
+            ps = this.connection.prepareStatement("DELETE  FROM TipoPago WHERE id = ?");
             ps.setInt(1, codigo);
             valor = ps.executeUpdate();
             if (valor > 0) {
@@ -99,9 +99,7 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
     }
 
     @Override
-    public List<Estado> buscarEstado(Estado estado) throws Exception {
+    public List<TipoPago> buscarTipo(TipoPago tipoPago) throws Exception {
         return null;
     }
-
-
 }

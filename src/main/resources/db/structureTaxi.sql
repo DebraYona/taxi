@@ -35,15 +35,6 @@ CREATE TABLE `Cliente` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Cliente`
---
-
-LOCK TABLES `Cliente` WRITE;
-/*!40000 ALTER TABLE `Cliente` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Cliente` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `Conductor`
 --
 
@@ -63,15 +54,6 @@ CREATE TABLE `Conductor` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Conductor`
---
-
-LOCK TABLES `Conductor` WRITE;
-/*!40000 ALTER TABLE `Conductor` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Conductor` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `Estado`
 --
 
@@ -85,15 +67,6 @@ CREATE TABLE `Estado` (
   UNIQUE KEY `status_ak_1` (`nombreEstado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Estado`
---
-
-LOCK TABLES `Estado` WRITE;
-/*!40000 ALTER TABLE `Estado` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Estado` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `EstadoViajeTaxi`
@@ -123,15 +96,6 @@ CREATE TABLE `EstadoViajeTaxi` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `EstadoViajeTaxi`
---
-
-LOCK TABLES `EstadoViajeTaxi` WRITE;
-/*!40000 ALTER TABLE `EstadoViajeTaxi` DISABLE KEYS */;
-/*!40000 ALTER TABLE `EstadoViajeTaxi` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `ModeloCarro`
 --
 
@@ -148,15 +112,6 @@ CREATE TABLE `ModeloCarro` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `ModeloCarro`
---
-
-LOCK TABLES `ModeloCarro` WRITE;
-/*!40000 ALTER TABLE `ModeloCarro` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ModeloCarro` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `TipoPago`
 --
 
@@ -170,16 +125,6 @@ CREATE TABLE `TipoPago` (
   UNIQUE KEY `payment_type_ak_1` (`nombreTipoPago`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `TipoPago`
---
-
-LOCK TABLES `TipoPago` WRITE;
-/*!40000 ALTER TABLE `TipoPago` DISABLE KEYS */;
-INSERT INTO `TipoPago` VALUES (1,'Efectivo'),(2,'Tarjeta');
-/*!40000 ALTER TABLE `TipoPago` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `Turno`
@@ -205,15 +150,6 @@ CREATE TABLE `Turno` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Turno`
---
-
-LOCK TABLES `Turno` WRITE;
-/*!40000 ALTER TABLE `Turno` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Turno` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `Unidad`
 --
 
@@ -235,15 +171,6 @@ CREATE TABLE `Unidad` (
   CONSTRAINT `cab_driver` FOREIGN KEY (`idConductor`) REFERENCES `Conductor` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Unidad`
---
-
-LOCK TABLES `Unidad` WRITE;
-/*!40000 ALTER TABLE `Unidad` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Unidad` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `ViajeTaxi`
@@ -273,87 +200,12 @@ CREATE TABLE `ViajeTaxi` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `ViajeTaxi`
---
-
-LOCK TABLES `ViajeTaxi` WRITE;
-/*!40000 ALTER TABLE `ViajeTaxi` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ViajeTaxi` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Temporary table structure for view `conductores`
---
-
-DROP TABLE IF EXISTS `conductores`;
-/*!50001 DROP VIEW IF EXISTS `conductores`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `conductores` AS SELECT 
- 1 AS `id`,
- 1 AS `nombreConductor`,
- 1 AS `apellidoConductor`,
- 1 AS `placa`*/;
-SET character_set_client = @saved_cs_client;
-
---
--- Temporary table structure for view `viajes`
---
-
-DROP TABLE IF EXISTS `viajes`;
-/*!50001 DROP VIEW IF EXISTS `viajes`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `viajes` AS SELECT 
- 1 AS `idCliente`,
- 1 AS `nombreCliente`,
- 1 AS `direccionDestinoViaje`,
- 1 AS `precio`*/;
-SET character_set_client = @saved_cs_client;
-
---
 -- Dumping events for database 'taxi_feik'
 --
 
 --
 -- Dumping routines for database 'taxi_feik'
 --
-
---
--- Final view structure for view `conductores`
---
-
-/*!50001 DROP VIEW IF EXISTS `conductores`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `conductores` AS select `Conductor`.`id` AS `id`,`Conductor`.`nombreConductor` AS `nombreConductor`,`Conductor`.`apellidoConductor` AS `apellidoConductor`,`Unidad`.`placa` AS `placa` from (`Conductor` join `Unidad` on((`Unidad`.`idConductor` = `Conductor`.`id`))) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `viajes`
---
-
-/*!50001 DROP VIEW IF EXISTS `viajes`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `viajes` AS select `Cliente`.`idCliente` AS `idCliente`,`Cliente`.`nombreCliente` AS `nombreCliente`,`ViajeTaxi`.`direccionDestinoViaje` AS `direccionDestinoViaje`,`ViajeTaxi`.`precio` AS `precio` from ((`Cliente` join `EstadoViajeTaxi` on((`Cliente`.`idCliente` = `EstadoViajeTaxi`.`idCliente`))) join `ViajeTaxi` on((`EstadoViajeTaxi`.`idViajeTaxi` = `ViajeTaxi`.`id`))) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -364,4 +216,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-30  4:09:17
+-- Dump completed on 2017-11-30  4:20:42

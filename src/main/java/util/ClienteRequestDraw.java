@@ -8,10 +8,6 @@ import java.text.SimpleDateFormat;
 
 public class ClienteRequestDraw extends Cliente{
 
-
-
-
-
         private Request request;
 
         public ClienteRequestDraw(Request request) throws ParseException {
@@ -27,7 +23,6 @@ public class ClienteRequestDraw extends Cliente{
             super.setEmail(this.request.queryParams("email"));
 
             super.setTelefono(this.request.queryParams("telefono"));
-
 
         }
     }

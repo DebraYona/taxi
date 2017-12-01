@@ -30,7 +30,7 @@ public class ViajeTaxiRequestDraw extends ViajeTaxi {
 
         super.setDireccionInicial(this.request.queryParams("direccionInicial"));
 
-        super.setDireccDireccionFinal(this.request.queryParams("direccionFinal"));
+        super.setDireccionDestino(this.request.queryParams("direccionFinal"));
         super.setPuntoInicialGPS(this.request.queryParams("inicialGps"));
         super.setPuntoFinalGPS(this.request.queryParams("finGps"));
 
@@ -40,7 +40,7 @@ public class ViajeTaxiRequestDraw extends ViajeTaxi {
         if (this.request.queryParams("cancelado") != null)
             super.setCancelado(Integer.parseInt(this.request.queryParams("cancelado")));
 
-
+        super.setPrecio(Float.parseFloat(this.request.queryParams("precio")));
 
     }
 }

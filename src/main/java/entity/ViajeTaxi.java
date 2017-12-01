@@ -8,11 +8,28 @@ public class ViajeTaxi {
     Date tiempoInicio;
     Date TiempoFin;
     String direccionInicial;
-    String direccDireccionFinal;
-    String puntoInicialGPS;
     String direccionDestino;
+    String puntoInicialGPS;
     String puntoFinalGPS;
     int cancelado;
+    int idPago;
+    float precio;
+
+    public int getIdPago() {
+        return idPago;
+    }
+
+    public void setIdPago(int idPago) {
+        this.idPago = idPago;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
 
     public int getIdViaje() {
         return idViaje;
@@ -54,13 +71,6 @@ public class ViajeTaxi {
         this.direccionInicial = direccionInicial;
     }
 
-    public String getDireccDireccionFinal() {
-        return direccDireccionFinal;
-    }
-
-    public void setDireccDireccionFinal(String direccDireccionFinal) {
-        this.direccDireccionFinal = direccDireccionFinal;
-    }
 
     public String getPuntoInicialGPS() {
         return puntoInicialGPS;

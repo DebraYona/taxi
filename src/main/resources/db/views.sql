@@ -19,8 +19,6 @@ CREATE VIEW conductor as
     Conductor.numeroLincenciaConducir
   From Conductor;
 
-
-
 CREATE
   ALGORITHM = UNDEFINED
   DEFINER = `root`@`localhost`
@@ -35,4 +33,3 @@ VIEW `taxi_feik`.`viajes` AS
     ((`taxi_feik`.`Cliente`
       JOIN `taxi_feik`.`EstadoViajeTaxi` ON ((`taxi_feik`.`Cliente`.`idCliente` = `taxi_feik`.`EstadoViajeTaxi`.`idCliente`)))
       JOIN `taxi_feik`.`ViajeTaxi` ON ((`taxi_feik`.`EstadoViajeTaxi`.`idViajeTaxi` = `taxi_feik`.`ViajeTaxi`.`id`)))
-

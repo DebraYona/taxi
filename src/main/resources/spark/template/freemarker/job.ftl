@@ -41,7 +41,7 @@
                 <ul>
                     <li class="active"><a href="index.ftl">Inicio</a></li>
                     <li><a href="/services.ftl">Servicios</a></li>
-                    <li><a href="/drivers.ftl">Conductores</a></li>
+                    <li><a href="/conductores">Conductores</a></li>
                     <li><a href="/cars.ftl">Carros</a></li>
                     <li><a href="/garage.ftl">Garage</a></li>
                     <li><a href="/locations.ftl">Localizacion</a></li>
@@ -104,7 +104,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-4">
-                    <form action="/form/ingresar_conductor" method="POST" id="commentForm">
+                    <form action="/form/ingresar_conductor" method="GET" id="commentForm">
                         <fieldset>
                             <input type="text" name="name" placeholder="Nombre" />
                         </fieldset>
@@ -124,7 +124,7 @@
                         <fieldset>
                         <input type="file" name="resume" />
                         </fieldset>-->
-                        <button class="btn btn-primary">Aplicar para el trabajo</button>
+                        <button  type="submit" class="btn btn-primary">Aplicar para el trabajo</button>
                     </form>
                 </div>
             </div>

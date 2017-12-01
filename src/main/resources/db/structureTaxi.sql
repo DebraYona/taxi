@@ -96,8 +96,6 @@ create table Turno
 	idUnidad int not null,
 	horaInicioTurno timestamp null,
 	horaFinTurno timestamp null,
-	horaInicioSesion timestamp null,
-	horaFinSesion timestamp null,
 	constraint drives_driver
 		foreign key (idConductor) references Conductor (id)
 )

@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <form class="booking-form">
+
 
 
                 <div class="row">
@@ -68,7 +68,7 @@
 
                     </form>
                 </div>
-            </form>
+
         </div>
 
     </section>

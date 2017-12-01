@@ -4,6 +4,7 @@ import entity.Cliente;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClienteMYSQLFactoryDAO implements ClienteDAO {
 
@@ -43,8 +44,6 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
 */
         @Override
         public Cliente buscarCliente(String nombre) {
-            Connection connection  = null;
-            Statement stmt = null;
             PreparedStatement psmt= null;
 
             Cliente cliente = null;
@@ -52,15 +51,9 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
             try {
                 connection = this.connection;
 
-                stmt = connection.createStatement();
-                //stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
-                //stmt.executeUpdate("INSERT INTO usuario VALUES ('debra','debra',987894)");
-                //ResultSet rs = stmt.executeQuery("SELECT * FROM usuario");
-
                 psmt = connection.prepareStatement("SELECT * FROM Cliente WHERE nombreCliente = ?");
                 psmt.setString(1,nombre);
                 ResultSet rs = psmt.executeQuery();
-
 
                 ArrayList<String> output = new ArrayList<String>();
 
@@ -76,7 +69,6 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
                     cliente.setTelefono(rs.getString(4));
                 }
 
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }finally {
@@ -87,29 +79,43 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
                 }
             }
 
-
-
-
             return cliente;
         }
 
     @Override
-    public ArrayList<Cliente> listarClientes(Cliente cliente) throws SQLException {
-        Connection connection  = null;
-        Statement stmt = null;
-        PreparedStatement psmt= null;
+    public ArrayList<Cliente> listarClientes() throws SQLException {
+        PreparedStatement psmt;
+        Cliente cliente;
 
-        ArrayList<Cliente> lista = new ArrayList<Cliente>();
+        ArrayList<Cliente> listado = new ArrayList<>();
+        try {
+            psmt = this.connection.prepareStatement("SELECT * FROM Cliente");
 
-        connection = this.connection;
+            ResultSet rs = psmt.executeQuery();
 
-        return null;
+            while (rs.next()){
+                cliente = new Cliente();
+                cliente.setId_cliente(rs.getInt(1));
+                cliente.setNombreCliente(rs.getString(2));
+                cliente.setApellidoCliente(rs.getString(3));
+                cliente.setEmail(rs.getString(4));
+                cliente.setTelefono(rs.getString(5));
+
+                listado.add(cliente);
+            }
+
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return listado;
     }
 
 
         @Override
         public int insertarCliente(Cliente cliente) {
-            PreparedStatement ps = null;
+            PreparedStatement ps;
             int last = 0;
 
             try {
@@ -120,11 +126,7 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
                 ps.setString(3,cliente.getEmail());
                 ps.setString(4,cliente.getTelefono());
 
-
                 ps.executeUpdate();
-
-
-
 
                 ResultSet rs = ps.getGeneratedKeys();
                 if (rs.next()) {
@@ -133,14 +135,9 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
                 System.out.println(last);
                 cliente.setId_cliente(last);
 
-
-
-
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
 
             //psmt = connection.prepareStatement("SELECT * FROM usuario WHERE nombre = ?")
 
@@ -148,17 +145,37 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
 
         }
 
-        @Override
-        public void modificarCliente(Cliente cliente) {
+    @Override
+    public int modificarCliente(Cliente cliente) throws Exception {
+        PreparedStatement ps;
 
+        int resp;
+        try {
+            ps = this.connection.prepareStatement("UPDATE Cliente SET nombreCliente = ? , apellidoCliente = ? , email = ? , telefono = ? WHERE Cliente.idCliente = ?");
+            ps.setInt(1,cliente.getId_cliente());
+            ps.setString(2,cliente.getNombreCliente());
+            ps.setString(3,cliente.getApellidoCliente());
+            ps.setString(4,cliente.getEmail());
+            ps.setString(5,cliente.getTelefono());
+
+            resp = ps.executeUpdate();
+
+            if (resp>0)
+                return resp;
+            return 0;
         }
+        catch (SQLException e){
+            e.printStackTrace();
+            return -1;
+        }
+    }
 
     @Override
     public int eliminarCliente(int codigo) throws Exception {
-        PreparedStatement ps = null;
+        PreparedStatement ps;
         int valor;
         try {
-            ps = this.connection.prepareStatement("DELETE *, FROM Cliente c  WHERE idCliente = ?");
+            ps = this.connection.prepareStatement("DELETE * FROM Cliente c WHERE c.idCliente = ?");
             ps.setInt(1, codigo);
             valor = ps.executeUpdate();
             if (valor > 0) {
@@ -173,5 +190,3 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
     }
 
 }
-
-

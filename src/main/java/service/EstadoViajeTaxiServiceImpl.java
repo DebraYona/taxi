@@ -1,6 +1,5 @@
 package service;
 
-import dao.ConductorDAO;
 import dao.EstadoViajeTaxiDAO;
 import dao.FactoryDAO;
 import entity.EstadoViajeTaxi;
@@ -13,21 +12,21 @@ public class EstadoViajeTaxiServiceImpl implements EstadoViajeTaxiService {
 
     @Override
     public int insertarEstadoViajeTaxi(EstadoViajeTaxi estadoViajeTaxi) throws Exception {
-        return 0;
+        return estadoViajeTaxiDAO.insertarEstadoViajeTaxi(estadoViajeTaxi);
     }
 
     @Override
     public int eliminarEstadoViajeTaxi(int codigo) throws Exception {
-        return 0;
+        return estadoViajeTaxiDAO.eliminarEstadoViajeTaxi(codigo);
     }
 
     @Override
     public List<EstadoViajeTaxi> listarEstadoViajeTaxi() throws Exception {
-        return null;
+        return estadoViajeTaxiDAO.listarEstadoViajeTaxi();
     }
 
     @Override
     public List<EstadoViajeTaxi> buscarEstadoViajeTaxi(EstadoViajeTaxi estadoViajeTaxi) throws Exception {
-        return null;
+        return estadoViajeTaxiDAO.buscarEstadoViajeTaxi(estadoViajeTaxi);
     }
 }

@@ -1,3 +1,5 @@
+SET FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS Cliente;
 create table Cliente
 (
 	idCliente int auto_increment
@@ -8,7 +10,7 @@ create table Cliente
 	telefono varchar(13) null
 )
 ;
-
+DROP TABLE IF EXISTS Conductor;
 create table Conductor
 (
 	id int auto_increment
@@ -21,7 +23,7 @@ create table Conductor
 	trabajando tinyint(1) default '1' not null
 )
 ;
-
+DROP TABLE IF EXISTS Estado;
 create table Estado
 (
 	id int auto_increment
@@ -31,7 +33,7 @@ create table Estado
 		unique (nombreEstado)
 )
 ;
-
+DROP TABLE IF EXISTS EstadoViajeTaxi;
 create table EstadoViajeTaxi
 (
 	id int auto_increment
@@ -64,7 +66,7 @@ create index cab_ride_status_shift
 create index cab_ride_status_status
 	on EstadoViajeTaxi (idEstado)
 ;
-
+DROP TABLE IF EXISTS ModeloCarro;
 create table ModeloCarro
 (
 	id int auto_increment
@@ -75,7 +77,7 @@ create table ModeloCarro
 		unique (nombreModelo)
 )
 ;
-
+DROP TABLE IF EXISTS TipoPago;
 create table TipoPago
 (
 	id int auto_increment
@@ -85,7 +87,7 @@ create table TipoPago
 		unique (nombreTipoPago)
 )
 ;
-
+DROP TABLE IF EXISTS Turno;
 create table Turno
 (
 	id int auto_increment
@@ -113,7 +115,7 @@ alter table EstadoViajeTaxi
 	add constraint cab_ride_status_shift
 		foreign key (idTurno) references Turno (id)
 ;
-
+DROP TABLE IF EXISTS Unidad;
 create table Unidad
 (
 	id int auto_increment
@@ -144,7 +146,7 @@ alter table Turno
 	add constraint drives_cab
 		foreign key (idUnidad) references Unidad (id)
 ;
-
+DROP TABLE IF EXISTS ViajeTaxi;
 create table ViajeTaxi
 (
 	id int auto_increment
@@ -179,7 +181,7 @@ alter table EstadoViajeTaxi
 		foreign key (idViajeTaxi) references ViajeTaxi (id)
 ;
 
-create view conductores as
+create or replace view conductores as
 SELECT
     `taxi_feik`.`Conductor`.`id`                AS `id`,
     `taxi_feik`.`Conductor`.`nombreConductor`   AS `nombreConductor`,
@@ -188,7 +190,7 @@ SELECT
   FROM (`taxi_feik`.`Conductor`
     JOIN `taxi_feik`.`Unidad` ON ((`taxi_feik`.`Unidad`.`idConductor` = `taxi_feik`.`Conductor`.`id`)));
 
-create view viajes as
+create or replace view viajes as
 SELECT
     `taxi_feik`.`Cliente`.`idCliente`               AS `idCliente`,
     `taxi_feik`.`Cliente`.`nombreCliente`           AS `nombreCliente`,
@@ -200,3 +202,4 @@ SELECT
       ON ((`taxi_feik`.`EstadoViajeTaxi`.`idViajeTaxi` = `taxi_feik`.`ViajeTaxi`.`id`)));
 
 
+SET FOREIGN_KEY_CHECKS=1;

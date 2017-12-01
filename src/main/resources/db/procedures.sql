@@ -1,3 +1,5 @@
+DROP PROCEDURE IF EXISTS ini_turn_p;
+
 DELIMITER //
 CREATE PROCEDURE ini_turn_p (IN idC INT,IN idU INT)
   BEGIN

@@ -1,3 +1,5 @@
+DROP FUNCTION IF EXISTS getLatitude;
+DELIMITER //
 CREATE FUNCTION `getLatitude`
   (GPStext text) RETURNS float
   BEGIN
@@ -5,9 +7,11 @@ CREATE FUNCTION `getLatitude`
     SET coordinate = NULL;
     SET coordinate = SUBSTRING_INDEX(GPStext, ',', 1);
     RETURN coordinate;
-  END;
+  END //
+DELIMITER ;
 
-
+DROP FUNCTION IF EXISTS getLongitude;
+DELIMITER //
 CREATE FUNCTION `getLongitude`
   (GPStext text) RETURNS float
   BEGIN
@@ -15,9 +19,11 @@ CREATE FUNCTION `getLongitude`
     SET coordinate = NULL;
     SET coordinate = SUBSTRING_INDEX(GPStext, ',', -1);
     RETURN coordinate;
-  END;
+  END //
+DELIMITER ;
 
-
+DROP FUNCTION IF EXISTS CalcularLatLngDistanciaKm;
+DELIMITER //
 CREATE FUNCTION `CalcularLatLngDistanciaKm`
   (latInicial FLOAT, lngInicial FLOAT, latFinal FLOAT, lngFinal FLOAT)
   RETURNS FLOAT
@@ -28,4 +34,5 @@ DETERMINISTIC
                                      2) + COS(latInicial * pi()/180 ) * COS(abs(latFinal) *
                                                                             pi()/180) * POWER(SIN((lngInicial - lngFinal) *
                                                                                                   pi()/180 / 2), 2) ));
-  END;
+  END //
+DELIMITER ;

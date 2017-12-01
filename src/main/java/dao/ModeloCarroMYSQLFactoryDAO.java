@@ -12,9 +12,6 @@ public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
 
     public ModeloCarroMYSQLFactoryDAO(){this.connection = new util.Connection().getConnection();}
 
-    public ModeloCarroMYSQLFactoryDAO() {
-        this.connection = new util.Connection().getConnection();
-    }
 
     @Override
     public int insertarModelo(ModeloCarro modelo) throws Exception {

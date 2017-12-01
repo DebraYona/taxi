@@ -9,5 +9,4 @@ public interface ConductorDAO {
     List<Conductor> listarConductores() throws Exception;
     int eliminarConductor(int codigo) throws Exception;
     List<Conductor> buscarConductor(Conductor conductor) throws Exception;
-
 }

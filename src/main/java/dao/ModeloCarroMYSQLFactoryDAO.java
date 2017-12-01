@@ -9,7 +9,8 @@ import java.util.List;
 
 public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
     private Connection connection = null;
-    private Statement stmt = null;
+
+    public ModeloCarroMYSQLFactoryDAO(){this.connection = new util.Connection().getConnection();}
 
     public ModeloCarroMYSQLFactoryDAO() {
         this.connection = new util.Connection().getConnection();
@@ -17,7 +18,7 @@ public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
 
     @Override
     public int insertarModelo(ModeloCarro modelo) throws Exception {
-        PreparedStatement ps = null;
+        PreparedStatement ps;
         int last = 0;
 
         try {
@@ -26,21 +27,16 @@ public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
             ps.setString(1, modelo.getNombreModelo());
             ps.setString(2, modelo.getDescripcionModelo());
 
-
-
             ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 last = rs.getInt(1);
             }
-
             modelo.setIdModelo(last);
-
-        } catch (SQLException e) {
+        }catch (SQLException e) {
             e.printStackTrace();
         }
-
 
         //psmt = connection.prepareStatement("SELECT * FROM usuario WHERE nombre = ?")
 
@@ -53,7 +49,6 @@ public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
         PreparedStatement psmt = null;
         ArrayList<ModeloCarro> listado = new ArrayList<ModeloCarro>();
 
-
         try {
             connection = this.connection;
             psmt = connection.prepareStatement("SELECT * FROM ModeloCarro");
@@ -64,9 +59,7 @@ public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
                 modelo.setNombreModelo(rs.getString(2));
                 modelo.setDescripcionModelo(rs.getString(3));
 
-
                 listado.add(modelo);
-
             }
 
         } catch (SQLException e) {
@@ -74,12 +67,9 @@ public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
         } finally {
             try {
                 connection.close();
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
-
         }
         return listado;
     }

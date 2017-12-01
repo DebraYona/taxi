@@ -86,6 +86,13 @@
                 </div>
             </div>
             <form class="booking-form">
+                <div class="row">
+                    <div class="col-sm-12" id="map" style="height: 300px"></div>
+                    <input type="hidden" id="inicio" />
+                    <input type="hidden" id="destino" />
+                </div>
+
+
 
                 <div class="row">
                     <div class="col-sm-3">
@@ -117,7 +124,7 @@
 
                         <fieldset>
                             <select name="passengers">
-                                <option>Pasageros</option>
+                                <option>Pasajeros</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -164,78 +171,78 @@
     </section>
 
     <!--Precios-->
-    <section class="alt prices">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="title">
-                        <h2>Prices</h2>
-                        <h6>No hidden charges</h6>
-                    </div>
-                    <div class="info show-mobile">
-                        Drag the table left and right.
-                    </div>
-                    <div class="responsive-table">
-                        <table class="price-table">
-                            <thead>
-                            <tr>
-                                <th></th>
-                                <th><i class="icon-car-econo"></i>Econo</th>
-                                <th><i class="icon-car-classic"></i>Classic</th>
-                                <th><i class="icon-car-wagon"></i>Wagon</th>
-                                <th><i class="icon-car-minivan"></i>Minivan</th>
-                                <th><i class="icon-car-suv"></i>SUV</th>
-                                <th><i class="icon-car-limo"></i>Limousine</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th>Per km</th>
-                                <td>$5</td>
-                                <td>$6</td>
-                                <td>$7</td>
-                                <td>$8</td>
-                                <td>$10</td>
-                                <td>$15</td>
-                            </tr>
-                            <tr>
-                                <th>Landing</th>
-                                <td>$5</td>
-                                <td>$6</td>
-                                <td>$7</td>
-                                <td>$8</td>
-                                <td>$10</td>
-                                <td>$50</td>
-                            </tr>
-                            <tr>
-                                <th>Parking</th>
-                                <td>$5</td>
-                                <td>$6</td>
-                                <td>$7</td>
-                                <td>$8</td>
-                                <td>$10</td>
-                                <td>$30</td>
-                            </tr>
-                            </tbody>
-                            <tfoot>
-                            <tr>
-                                <th></th>
-                                <td><a href="#" class="btn btn-primary">More</a></td>
-                                <td><a href="#" class="btn btn-primary">More</a></td>
-                                <td><a href="#" class="btn btn-primary">More</a></td>
-                                <td><a href="#" class="btn btn-primary">More</a></td>
-                                <td><a href="#" class="btn btn-primary">More</a></td>
-                                <td><a href="#" class="btn btn-primary">More</a></td>
-                            </tr>
-                            </tfoot>
-                        </table>
-                    </div>
+    <#--<section class="alt prices">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title">
+                    <h2>Prices</h2>
+                    <h6>No hidden charges</h6>
+                </div>
+                <div class="info show-mobile">
+                    Drag the table left and right.
+                </div>
+                <div class="responsive-table">
+                    <table class="price-table">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th><i class="icon-car-econo"></i>Econo</th>
+                            <th><i class="icon-car-classic"></i>Classic</th>
+                            <th><i class="icon-car-wagon"></i>Wagon</th>
+                            <th><i class="icon-car-minivan"></i>Minivan</th>
+                            <th><i class="icon-car-suv"></i>SUV</th>
+                            <th><i class="icon-car-limo"></i>Limousine</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Per km</th>
+                            <td>$5</td>
+                            <td>$6</td>
+                            <td>$7</td>
+                            <td>$8</td>
+                            <td>$10</td>
+                            <td>$15</td>
+                        </tr>
+                        <tr>
+                            <th>Landing</th>
+                            <td>$5</td>
+                            <td>$6</td>
+                            <td>$7</td>
+                            <td>$8</td>
+                            <td>$10</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <th>Parking</th>
+                            <td>$5</td>
+                            <td>$6</td>
+                            <td>$7</td>
+                            <td>$8</td>
+                            <td>$10</td>
+                            <td>$30</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th></th>
+                            <td><a href="#" class="btn btn-primary">More</a></td>
+                            <td><a href="#" class="btn btn-primary">More</a></td>
+                            <td><a href="#" class="btn btn-primary">More</a></td>
+                            <td><a href="#" class="btn btn-primary">More</a></td>
+                            <td><a href="#" class="btn btn-primary">More</a></td>
+                            <td><a href="#" class="btn btn-primary">More</a></td>
+                        </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>-->
 
-    <!--Why-->
+<!--Why-->
     <section class="why">
         <div class="container">
             <div class="row">

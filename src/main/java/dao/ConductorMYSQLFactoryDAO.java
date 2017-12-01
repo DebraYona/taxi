@@ -8,7 +8,8 @@ import java.util.List;
 
 public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
     private Connection connection = null;
-    private Statement stmt = null;
+
+    public  ConductorMYSQLFactoryDAO(){this.connection=new util.Connection().getConnection(); }
 
     public ConductorMYSQLFactoryDAO() {
         this.connection = new util.Connection().getConnection();
@@ -29,7 +30,6 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
             ps.setDate(5, new Date(conductor.getFecha_caducida().getTime()));
             ps.setInt(6, conductor.getTrabajando());
 
-
             ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
@@ -43,7 +43,6 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
             e.printStackTrace();
         }
 
-
         //psmt = connection.prepareStatement("SELECT * FROM usuario WHERE nombre = ?")
 
         return last;
@@ -55,14 +54,14 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
         Connection connection = null;
         PreparedStatement psmt = null;
         ArrayList<Conductor> listado = new ArrayList<Conductor>();
-
+        Conductor conductor;
 
         try {
             connection = this.connection;
             psmt = connection.prepareStatement("SELECT * FROM Conductor");
             ResultSet rs = psmt.executeQuery();
             while (rs.next()) {
-                Conductor conductor = new Conductor();
+                conductor = new Conductor();
                 conductor.setIdConductor(rs.getInt(1));
                 conductor.setNombreConductor(rs.getString(2));
                 conductor.setApellidoConductor(rs.getString(3));
@@ -72,7 +71,6 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
                 conductor.setTrabajando(rs.getInt(7));
 
                 listado.add(conductor);
-
             }
 
         } catch (SQLException e) {
@@ -80,23 +78,19 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
         } finally {
             try {
                 connection.close();
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
-
         }
         return listado;
     }
 
     @Override
     public int eliminarConductor(int codigo) throws Exception {
-
         PreparedStatement ps = null;
         int valor;
         try {
-            ps = this.connection.prepareStatement("DELETE  FROM Conductor   WHERE id = ?");
+            ps = this.connection.prepareStatement("DELETE * FROM Conductor WHERE id = ?");
             ps.setInt(1, codigo);
             valor = ps.executeUpdate();
             if (valor > 0) {
@@ -112,6 +106,7 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
 
     @Override
     public List<Conductor> buscarConductor(Conductor conductor) throws Exception {
+
         return null;
     }
 }

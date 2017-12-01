@@ -43,7 +43,7 @@
                     <li><a href="/services.ftl">Servicios</a></li>
                     <li><a href="/conductores">Conductores</a></li>
                     <li><a href="/cars.ftl">Carros</a></li>
-                    <li><a href="/garage.ftl">Garage</a></li>
+                    <li><a href="/modelo.ftl">Modelo Carro</a></li>
                     <li><a href="/locations.ftl">Localizacion</a></li>
                     <li><a href="/index.ftl#!">Paginas</a>
                         <ul>
@@ -112,7 +112,7 @@
                             <input type="text" name="ape" placeholder="Apellidos" />
                         </fieldset>
                         <fieldset>
-                            <input type="text" name="nacimiento" placeholder="Fecha de Nacimiento" class="datepicker" />
+                            <input type="text" name="nacimiento" placeholder="Fecha de Nacimiento"  />
                         </fieldset>
                         <fieldset>
                             <input type="text" name="licencia" placeholder="Licencia de conducir" />

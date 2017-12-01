@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="description" content="Taxi Feik">
+    <meta name="description" content="Taxi Erbu">
     <meta name="author" content="Dalgom themes, info@dalgomcream.eu">
     <title><@title >    </@title></title>
     <link rel="shortcut icon" href="/images/favicon.png">
@@ -51,7 +51,7 @@
                     <li><a href="/servicios">servicios</a></li>
                     <li><a href="/conductores">conductores</a></li>
                     <li><a href="/carros">carros</a></li>
-                    <li><a href="/modeloCarro">Modelos</a></li>
+                    <li><a href="/modelo">Modelos</a></li>
                     <li><a href="/ubicaciones">localizacion</a></li>
                     <li><a href="#">paginas</a>
                         <ul>
@@ -126,7 +126,7 @@
                             <li><a href="/servicios">servicios</a></li>
                             <li><a href="/conductores">conductores</a></li>
                             <li><a href="/carros">carros</a></li>
-                            <li><a href="/modeloCarro">Modelos</a></li>
+                            <li><a href="/modelo">Modelos</a></li>
                             <li><a href="/ubicaciones">localizacion</a></li>
                             <li><a href="#">Paginas</a>
                             <li><a href="/trabajos">Trabajo</a></li>

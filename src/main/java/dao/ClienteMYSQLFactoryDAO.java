@@ -57,7 +57,7 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
                 //stmt.executeUpdate("INSERT INTO usuario VALUES ('debra','debra',987894)");
                 //ResultSet rs = stmt.executeQuery("SELECT * FROM usuario");
 
-                psmt = connection.prepareStatement("SELECT * FROM cliente WHERE nombreCliente = ?");
+                psmt = connection.prepareStatement("SELECT * FROM Cliente WHERE nombreCliente = ?");
                 psmt.setString(1,nombre);
                 ResultSet rs = psmt.executeQuery();
 
@@ -113,7 +113,7 @@ public class ClienteMYSQLFactoryDAO implements ClienteDAO {
             int last = 0;
 
             try {
-                ps = this.connection.prepareStatement("INSERT INTO cliente VALUES (NULL, ?,?,?,?)"
+                ps = this.connection.prepareStatement("INSERT INTO Cliente VALUES (NULL, ?,?,?,?)"
                         , Statement.RETURN_GENERATED_KEYS);
                 ps.setString(1,cliente.getNombreCliente());
                 ps.setString(2,cliente.getApellidoCliente());

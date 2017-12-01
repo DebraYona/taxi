@@ -33,7 +33,7 @@ FOR EACH ROW
       SIGNAL SQLSTATE '79846'
       SET MESSAGE_TEXT = 'Formato erroneo de gps en puntoFinalGPSViaje';
     END IF;
-  END$$
+  END $$
 DELIMITER ;
 
 
@@ -47,6 +47,6 @@ FOR EACH ROW
       signal SQLSTATE '45000';
     END IF;
 
-  END $$;
+  END $$
 
 DELIMITER ;

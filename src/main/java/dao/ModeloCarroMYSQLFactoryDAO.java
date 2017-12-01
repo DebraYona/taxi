@@ -11,6 +11,10 @@ public class ModeloCarroMYSQLFactoryDAO implements ModeloCarroDAO{
     private Connection connection = null;
     private Statement stmt = null;
 
+    public ModeloCarroMYSQLFactoryDAO() {
+        this.connection = new util.Connection().getConnection();
+    }
+
     @Override
     public int insertarModelo(ModeloCarro modelo) throws Exception {
         PreparedStatement ps = null;

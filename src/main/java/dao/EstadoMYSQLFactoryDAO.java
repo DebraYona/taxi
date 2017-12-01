@@ -12,6 +12,9 @@ public class EstadoMYSQLFactoryDAO implements EstadoDAO {
     private Connection connection = null;
     private Statement stmt = null;
 
+    public EstadoMYSQLFactoryDAO() {
+        this.connection = new util.Connection().getConnection();
+    }
     @Override
     public int insertarEstado(Estado estado) throws Exception {
         PreparedStatement ps = null;

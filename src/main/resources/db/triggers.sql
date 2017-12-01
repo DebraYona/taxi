@@ -9,6 +9,7 @@ FOR EACH ROW
 DELIMITER ;
 
 
+
 DELIMITER //
 CREATE TRIGGER ini_turn
 BEFORE INSERT ON Turno
@@ -17,6 +18,9 @@ FOR EACH ROW
     CALL ini_turn_p(NEW.idConductor,NEW.idUnidad);
   END //
 DELIMITER ;
+
+
+
 
 DELIMITER $$
 CREATE TRIGGER checkFormatoGPS BEFORE INSERT ON ViajeTaxi

@@ -10,6 +10,9 @@ public class TipoPagoMYSQLFactoryDAO implements TipoPagoDAO {
     private Connection connection = null;
     private Statement stmt = null;
 
+    public TipoPagoMYSQLFactoryDAO() {
+        this.connection = new util.Connection().getConnection();
+    }
     @Override
     public int insertarTipo(TipoPago tipoPago) throws Exception {
         PreparedStatement ps = null;

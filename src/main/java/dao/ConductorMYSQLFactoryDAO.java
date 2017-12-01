@@ -10,6 +10,10 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
     private Connection connection = null;
     private Statement stmt = null;
 
+    public ConductorMYSQLFactoryDAO() {
+        this.connection = new util.Connection().getConnection();
+    }
+
     @Override
     public int insertarConductor(Conductor conductor) throws Exception {
         PreparedStatement ps = null;

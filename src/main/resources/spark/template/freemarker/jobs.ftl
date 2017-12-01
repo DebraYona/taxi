@@ -19,7 +19,7 @@
                             <li class="job-salary">$45,000 - $60,000</li>
                             <li class="job-closing">Closing: Dec 29, 2016</li>
                         </ul>
-                        <p><a href="job.ftl" class="btn btn-primary">Apply for this job</a></p>
+                        <p><a href="/ingresar/conductor" class="btn btn-primary">Apply for this job</a></p>
                     </div>
                     <div class="job">
                         <h4>Marketing specialist</h4>

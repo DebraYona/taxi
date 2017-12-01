@@ -76,7 +76,7 @@ public class Main {
       return new ModelAndView(attributes, "cars.ftl");
     }, new FreeMarkerEngine());
 
-    get("/modelos", (req, res) -> {
+    get("/modelo", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
       return new ModelAndView(attributes, "modeloCarro.ftl");
     }, new FreeMarkerEngine());
@@ -508,6 +508,11 @@ public class Main {
     get("/conductores", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
       return new ModelAndView(attributes, "drivers.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/modelo", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "modeloCarro.ftl");
     }, new FreeMarkerEngine());
 
     get("/carros", (req, res) -> {

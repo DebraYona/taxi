@@ -22,7 +22,7 @@ public class ConductorRequestDraw extends Conductor {
 
         super.setLicencia(this.request.queryParams("licencia"));
 
-        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd MMMMM, yyyy");
         if(this.request.queryParams("fecha_nacimiento")!=null)
             super.setFech_nac(formatter.parse(this.request.queryParams("fecha_nacimiento")));
 

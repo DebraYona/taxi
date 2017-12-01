@@ -21,7 +21,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    port((System.getenv("PORT") != null)?Integer.valueOf(System.getenv("PORT")):8008);
+    port((System.getenv("PORT") != null)?Integer.valueOf(System.getenv("PORT")):8000);
     staticFileLocation("/public");
 /*
     before("/", (request, response) -> {
@@ -60,6 +60,42 @@ public class Main {
       Map<String, Object> attributes = new HashMap<>();
       return new ModelAndView(attributes, "index.ftl");
     }, new FreeMarkerEngine());
+
+    get("/servicios", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "services.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/conductores", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "drivers.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/carros", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "cars.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/garage", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "garage.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/ubicaciones", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "locations.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/trabajos", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "jobs.ftl");
+    }, new FreeMarkerEngine());
+
+    get("/contactanos", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      return new ModelAndView(attributes, "contact.ftl");
+    }, new FreeMarkerEngine());
+
 /*
     get("/login", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();

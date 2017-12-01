@@ -9,8 +9,6 @@ public class Turno {
     int idUnidad;
     Date horaInicioTurno;
     Date horaFinTurno;
-    Date inicioSesion;
-    Date finSesion;
 
     public int getIdTurno() {
         return idTurno;
@@ -52,19 +50,5 @@ public class Turno {
         this.horaFinTurno = horaFinTurno;
     }
 
-    public Date getInicioSesion() {
-        return inicioSesion;
-    }
-
-    public void setInicioSesion(Date inicioSesion) {
-        this.inicioSesion = inicioSesion;
-    }
-
-    public Date getFinSesion() {
-        return finSesion;
-    }
-
-    public void setFinSesion(Date finSesion) {
-        this.finSesion = finSesion;
-    }
 }
+

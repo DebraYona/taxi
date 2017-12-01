@@ -21,7 +21,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    port((System.getenv("PORT") != null)?Integer.valueOf(System.getenv("PORT")):8000);
+    port((System.getenv("PORT") != null)?Integer.valueOf(System.getenv("PORT")):8001);
     staticFileLocation("/public");
 /*
     before("/", (request, response) -> {
@@ -421,6 +421,35 @@ public class Main {
       return "OK";
     });
 
+    get("/form/ingresar_viaje", (req,res) -> {
+
+        String nombre = req.queryParams("name");
+        String email = req.queryParams("email");
+        String inicio = req.queryParams("from");
+        String fin = req.queryParams("to");
+        String ginicio = req.queryParams("gi");
+        String gfin = req.queryParams("gf");
+        String tini = req.queryParams("date") + " " + req.queryParams("time");
+        DateFormat fi = new SimpleDateFormat("dd MMMMM, yyyy HH:mm");
+        Date ti = fi.parse(tini);
+        int pasa = Integer.parseInt(req.queryParams("passengers"));
+        int pago = Integer.parseInt(req.queryParams("pago"));
+
+        ViajeTaxi viajeTaxi = new ViajeTaxi();
+
+        viajeTaxi.setDireccionInicial(inicio);
+        viajeTaxi.setPuntoInicialGPS(ginicio);
+        viajeTaxi.setDireccionDestino(fin);
+        viajeTaxi.setPuntoFinalGPS(gfin);
+        viajeTaxi.setTiempoInicio(ti);
+        viajeTaxi.setIdPago(pago);
+
+        ViajeTaxiServiceImpl service = new ViajeTaxiServiceImpl();
+
+        res.redirect("/ingresar/conductor");
+        return "OK";
+    });
+
     /*CONDUCTOR*/
 
     get("/ingresar/conductor", (req, res) -> {
@@ -434,12 +463,13 @@ public class Main {
 
       String nombres = req.queryParams("name");
       String apellidoCliente = req.queryParams("ape");
-      String nacmiento  = req.queryParams("nacmiento");
-      String licencia = req.queryParams("email");
+      String nacmiento  = req.queryParams("nacimiento");
+      String licencia = req.queryParams("licencia");
       String caducidad = req.queryParams("caducidad");
-
-      DateFormat formatter = new SimpleDateFormat("MM/dd/yy");
+      DateFormat formatter = new SimpleDateFormat("dd MMMMM, yyyy");
       java.util.Date date = formatter.parse(nacmiento);
+      DateFormat formatFeik = new SimpleDateFormat("yyyy");
+      Date cadi = formatFeik.parse(caducidad);
 
       Conductor conductor = new Conductor();
 
@@ -447,7 +477,7 @@ public class Main {
       conductor.setApellidoConductor(apellidoCliente);
       conductor.setFech_nac(date);
       conductor.setLicencia(licencia);
-      conductor.setLicencia(caducidad);
+      conductor.setFecha_caducida(cadi);
 
 
 

@@ -85,14 +85,12 @@
                     </div>
                 </div>
             </div>
-            <form class="booking-form">
+            <form class="booking-form" action="/form/ingresar_viaje" method="GET" id="viajeForm">
                 <div class="row">
                     <div class="col-sm-12" id="map" style="height: 300px"></div>
-                    <input type="hidden" id="inicio" />
-                    <input type="hidden" id="destino" />
+                    <input type="hidden" name="gi" id="inicio" />
+                    <input type="hidden" name="gf" id="destino" />
                 </div>
-
-
 
                 <div class="row">
                     <div class="col-sm-3">
@@ -147,8 +145,8 @@
                             <select name="pago">
 
                                 <option>Tipo de pago</option>
-                                <option>Efectivo</option>
-                                <option>Tarjeta</option>
+                                <option value="1">Efectivo</option>
+                                <option value="2">Tarjeta</option>
                             </select>
                         </fieldset>
                     </div>
@@ -163,7 +161,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <button class="btn btn-primary">Pedir Ahora</button>
+                        <button type="submit" class="btn btn-primary">Pedir Ahora</button>
                     </div>
                 </div>
             </form>

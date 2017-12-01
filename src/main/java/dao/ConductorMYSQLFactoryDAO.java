@@ -11,7 +11,6 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
 
     public  ConductorMYSQLFactoryDAO(){this.connection=new util.Connection().getConnection(); }
 
-
     @Override
     public int insertarConductor(Conductor conductor) throws Exception {
         PreparedStatement ps = null;

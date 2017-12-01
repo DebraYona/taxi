@@ -507,6 +507,9 @@ public class Main {
       util.Connection conection =  new util.Connection();
       try {
         conection.runCreate("structureTaxi.sql");
+        conection.runCreate("functions.sql");
+        conection.runCreate("procedures.sql");
+        conection.runCreate("triggers.sql");
         System.out.println("SQL OK!");
       } catch (IOException e) {
         e.printStackTrace();

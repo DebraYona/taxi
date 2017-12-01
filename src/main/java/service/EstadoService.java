@@ -11,4 +11,3 @@ public interface EstadoService {
     int eliminarEstado(int codigo) throws Exception;
     List<Estado> buscarEstado(Estado estado) throws Exception;
 }
-

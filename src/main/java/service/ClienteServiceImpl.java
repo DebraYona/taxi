@@ -18,8 +18,8 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public ArrayList<Cliente> listarCliente(Cliente cliente) throws Exception {
-        return ClienteDAO.listarClientes(cliente);
+    public ArrayList<Cliente> listarClientes() throws Exception {
+        return ClienteDAO.listarClientes();
     }
 
     @Override

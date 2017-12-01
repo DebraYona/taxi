@@ -92,7 +92,7 @@ public class ConductorMYSQLFactoryDAO implements ConductorDAO  {
         PreparedStatement ps = null;
         int valor;
         try {
-            ps = this.connection.prepareStatement("DELETE  FROM Conductor c  WHERE id = ?");
+            ps = this.connection.prepareStatement("DELETE  FROM Conductor   WHERE id = ?");
             ps.setInt(1, codigo);
             valor = ps.executeUpdate();
             if (valor > 0) {

@@ -28,7 +28,5 @@ public class UnidadRequestDraw extends Unidad {
         if(this.request.queryParams("estado")!=null)
             super.setEstado(Integer.parseInt(this.request.queryParams("estado")));
 
-
-
     }
 }

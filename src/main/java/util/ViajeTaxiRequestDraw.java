@@ -40,7 +40,7 @@ public class ViajeTaxiRequestDraw extends ViajeTaxi {
         if (this.request.queryParams("cancelado") != null)
             super.setCancelado(Integer.parseInt(this.request.queryParams("cancelado")));
 
-
+        super.setPrecio(Float.parseFloat(this.request.queryParams("precio")));
 
     }
 }

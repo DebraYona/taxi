@@ -76,9 +76,9 @@ public class Main {
       return new ModelAndView(attributes, "cars.ftl");
     }, new FreeMarkerEngine());
 
-    get("/garage", (req, res) -> {
+    get("/modelos", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
-      return new ModelAndView(attributes, "garage.ftl");
+      return new ModelAndView(attributes, "modeloCarro.ftl");
     }, new FreeMarkerEngine());
 
     get("/ubicaciones", (req, res) -> {

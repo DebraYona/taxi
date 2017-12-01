@@ -41,7 +41,7 @@
     </div>
     <div id="nav-bar" class="nav-bar">
         <div class="container">
-            <a href="/" class="logo"><img src="/images/logo.svg" alt="Taxi Feik"/></a>
+            <a href="/" class="logo"><img src="/images/logo.png" alt="Taxi Feik"/></a>
             <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
             <nav class="main-nav">
                 <ul>
@@ -49,7 +49,7 @@
                     <li><a href="/servicios">servicios</a></li>
                     <li><a href="/conductores">conductores</a></li>
                     <li><a href="/carros">carros</a></li>
-                    <li><a href="/garage">garage</a></li>
+                    <li><a href="/modeloCarro">Modelos</a></li>
                     <li><a href="/ubicaciones">localizacion</a></li>
                     <li><a href="#">paginas</a>
                         <ul>
@@ -124,7 +124,7 @@
                             <li><a href="/servicios">servicios</a></li>
                             <li><a href="/conductores">conductores</a></li>
                             <li><a href="/carros">carros</a></li>
-                            <li><a href="/garage">garage</a></li>
+                            <li><a href="/modeloCarro">Modelos</a></li>
                             <li><a href="/ubicaciones">localizacion</a></li>
                             <li><a href="#">Paginas</a>
                             <li><a href="/trabajos">Trabajo</a></li>

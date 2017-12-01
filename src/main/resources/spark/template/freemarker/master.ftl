@@ -18,6 +18,8 @@
     <title><@title >    </@title></title>
     <link rel="shortcut icon" href="/images/favicon.png">
     <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css" />
+
     <@css>    </@css>
 </head>
 <body>
@@ -168,6 +170,116 @@
 <script src="/js/picker.time.js"></script>
 <script src="/js/uber-google-maps.min.js"></script>
 <script src="/js/settings.js"></script>
+
+
+<script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+        type="text/javascript" charset="utf-8"></script>
+<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+        type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+<script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+<script>
+
+    /**
+     * Adds a  draggable marker to the map..
+     *
+     * @param {H.Map} map                      A HERE Map instance within the
+     *                                         application
+     * @param {H.mapevents.Behavior} behavior  Behavior implements
+     *                                         default interactions for pan/zoom
+     */
+    function addDraggableMarker(map, behavior, marker, marker2){
+
+        //var marker = new H.map.Marker({lat:42.35805, lng:-71.0636});
+
+        // Ensure that the marker can receive drag events
+        marker.draggable = true;
+        marker2.draggable = true;
+
+        map.addObject(marker);
+        map.addObject(marker2);
+
+        // disable the default draggability of the underlying map
+        // when starting to drag a marker object:
+        map.addEventListener('dragstart', function(ev) {
+            var target = ev.target;
+            if (target instanceof H.map.Marker) {
+                behavior.disable();
+            }
+        }, false);
+
+
+        // re-enable the default draggability of the underlying map
+        // when dragging has completed
+        map.addEventListener('dragend', function(ev) {
+            var target = ev.target;
+            if (target instanceof mapsjs.map.Marker) {
+                behavior.enable();
+                console.log(marker.getPosition());
+                console.log(marker2.getPosition());
+                document.querySelector("#inicio").value = marker.getPosition().lat+","+marker.getPosition().lng;
+                document.querySelector("#destino").value = marker2.getPosition().lat+","+marker.getPosition().lng;
+            }
+        }, false);
+
+        // Listen to the drag event and move the position of the marker
+        // as necessary
+        map.addEventListener('drag', function(ev) {
+            var target = ev.target,
+                    pointer = ev.currentPointer;
+            if (target instanceof mapsjs.map.Marker) {
+                target.setPosition(map.screenToGeo(pointer.viewportX, pointer.viewportY));
+            }
+        }, false);
+    }
+
+
+    var platform = new H.service.Platform({
+        'app_id': 'JLjFiSCSNZLtxd7ryK5v',
+        'app_code': 'hgPQ3N5_naoRiNz9sUMg6A'
+    });
+
+    // Obtain the default map types from the platform object:
+    var defaultLayers = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+            document.getElementById('map'),
+            defaultLayers.normal.map,
+            {
+                zoom: 16,
+                center: { lat: -12.0333758, lng: -77.0805004 }
+            });
+
+
+    // Create a marker icon from an image URL:
+    var icon = new H.map.Icon('/images/map-marker.png');
+
+    // Create a marker using the previously instantiated icon:
+    // var marker = new H.map.Marker({ lat: -12.0333758, lng: -77.0805004 }, { icon: icon });
+
+    // Add the marker to the map:
+   // map.addObject(marker);
+    //Step 3: make the map interactive
+    // MapEvents enables the event system
+    // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+    // Step 4: Create the default UI:
+    var ui = H.ui.UI.createDefault(map, defaultLayers, 'es-ES');
+
+
+    var marker = new H.map.Marker({ lat: -12.0333758, lng: -77.0805004 }, { icon: icon });
+    var marker2 = new H.map.Marker({ lat: -12.0333700, lng: -77.0805000 }, { icon: icon });
+    // Add the click event listener.
+    addDraggableMarker(map, behavior, marker, marker2);
+
+
+
+
+
+</script>
     <@js></@js>
 </body>
 </html>

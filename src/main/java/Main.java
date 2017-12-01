@@ -395,7 +395,7 @@ public class Main {
 
     get("/form/ingresar_cliente", (req, res) -> {
 
-      String nombres = req.queryParams("nombres");
+      String nombres = req.queryParams("name");
       String apellidoCliente = req.queryParams("apellidos");
       String email = req.queryParams("email");
 

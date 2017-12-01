@@ -35,3 +35,18 @@ FOR EACH ROW
     END IF;
   END$$
 DELIMITER ;
+
+
+DELIMITER $$
+
+CREATE TRIGGER validar_year_carro
+BEFORE INSERT ON Unidad
+FOR EACH ROW
+  BEGIN
+    If exists(SELECT annoFabrica FROM Unidad WHERE annoFabrica<2000) THEN
+      signal SQLSTATE '45000';
+    END IF;
+
+  END $$;
+
+DELIMITER ;

@@ -490,15 +490,46 @@ public class Main {
       return new ModelAndView(attributes, "locations.ftl");
     }, new FreeMarkerEngine());
 
-    get("/garaje", (req, res) -> {
+    /*modelo carro*/
+
+    get("/ingresar/modelo", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
-      return new ModelAndView(attributes, "garage.ftl");
+      return new ModelAndView(attributes, "modeloCarro.ftl");
     }, new FreeMarkerEngine());
+
+
+    get("/form/ingresar_modelo", (req, res) -> {
+
+      String nombres = req.queryParams("nombre");
+      String descripcion = req.queryParams("descripcion");
+
+
+      ModeloCarro modelo = new ModeloCarro();
+
+      modelo.setNombreModelo(nombres);
+      modelo.setDescripcionModelo(descripcion);
+
+
+
+      ModeloCarroServiceImpl service = new ModeloCarroServiceImpl();
+      int codigo_modelo = 0;
+      try {
+        codigo_modelo = service.insertarModelo(modelo);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+
+      res.redirect("/ingresar/modelo?msg=ok");
+      return "OK";
+    });
+
 
     get("/contactanos", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
       return new ModelAndView(attributes, "contact.ftl");
     }, new FreeMarkerEngine());
+
+
 
 
     get("/createdb", (req, res) -> {

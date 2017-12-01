@@ -22,5 +22,25 @@ public class MySQLFactoryDAO extends FactoryDAO {
         return new ModeloCarroMYSQLFactoryDAO();
     }
 
+    @Override
+    public EstadoViajeTaxiDAO getEstadoViajeTaxiDAO() {
+        return new EstadoViajeTaxiMYSQLFactoryDAO();
+    }
+
+    @Override
+    public TipoPagoDAO getTipoPagoDAO() {
+        return new TipoPagoMYSQLFactoryDAO();
+    }
+
+    @Override
+    public UnidadDAO getUnidadDAO() {
+        return new UnidadMYSQLFactoryDAO();
+    }
+
+    @Override
+    public ViajeTaxiDAO getViajeTaxi() {
+        return new ViajeTaxiMYSQLFactoryDAO();
+    }
+
 
 }

@@ -2,31 +2,32 @@ package service;
 
 import dao.ConductorDAO;
 import dao.FactoryDAO;
+import dao.TipoPagoDAO;
 import entity.TipoPago;
 
 import java.util.List;
 
 public class TipoPagoServiceImpl implements TipoPagoService {
     FactoryDAO factory = FactoryDAO.getFactory(FactoryDAO.MYSQL_FACTORY);
-    ConductorDAO conductorDAO = factory.getConductorDAO();
+    TipoPagoDAO tipoPagoDAO = factory.getTipoPagoDAO();
 
     @Override
     public int insertarTipo(TipoPago tipoPago) throws Exception {
-        return 0;
+        return tipoPagoDAO.insertarTipo(tipoPago);
     }
 
     @Override
     public List<TipoPago> listarTipo() throws Exception {
-        return null;
+        return tipoPagoDAO.listarTipo();
     }
 
     @Override
     public int eliminarTipo(int codigo) throws Exception {
-        return 0;
+        return tipoPagoDAO.eliminarTipo(codigo);
     }
 
     @Override
     public List<TipoPago> buscarTipo(TipoPago tipoPago) throws Exception {
-        return null;
+        return tipoPagoDAO.buscarTipo(tipoPago);
     }
 }

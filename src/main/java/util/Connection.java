@@ -24,7 +24,7 @@ public class Connection {
     public Connection() {
 
         try {
-            //this.connection = DriverManager.getConnection("jdbc:mysql://localhost/test2?user=root&password=megamisama");
+
             if((System.getenv("CLEARDB_DATABASE_URL") == null)) {
                 this.connection = DriverManager.getConnection(DB_URL, USER, PASS);//conexion local
             }else {

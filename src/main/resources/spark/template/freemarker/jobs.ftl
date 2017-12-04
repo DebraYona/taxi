@@ -22,17 +22,17 @@
                         <p><a href="/ingresar/conductor" class="btn btn-primary">Apply for this job</a></p>
                     </div>
                     <div class="job">
-                        <h4>Marketing specialist</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula sapien at turpis pharetra pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris neque lectus, sollicitudin eu metus nec, vulputate vestibulum mauris. Quisque volutpat dui id metus ornare, quis ultrices risus mollis. Curabitur quis dignissim magna. Vestibulum efficitur posuere mi sit amet placerat. Nullam ullamcorper tempus diam, sit amet congue arcu fringilla at.</p>
+                        <h4>Conductores especializados</h4>
+                        <p>Aplica para ser uno de nuestros conductores. Buena suerte.</p>
                         <ul class="job-meta">
                             <li class="job-type">Full time</li>
                             <li class="job-salary">$45,000 - $60,000</li>
                             <li class="job-closing">Closing: Dec 29, 2016</li>
                         </ul>
-                        <p><a href="job.ftl" class="btn btn-primary">Apply for this job</a></p>
+                        <p><a href="job.ftl" class="btn btn-primary">Aplica para el trabajo</a></p>
                     </div>
                     <div class="job">
-                        <h4>Call center oficer</h4>
+                        <h4>LLama a la oficina</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula sapien at turpis pharetra pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris neque lectus, sollicitudin eu metus nec, vulputate vestibulum mauris. Quisque volutpat dui id metus ornare, quis ultrices risus mollis. Curabitur quis dignissim magna. Vestibulum efficitur posuere mi sit amet placerat. Nullam ullamcorper tempus diam, sit amet congue arcu fringilla at.</p>
                         <ul class="job-meta">
                             <li class="job-type">Full time</li>

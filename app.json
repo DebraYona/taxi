@@ -1,5 +1,5 @@
 {
-  "name": "Taxi Feik",
+  "name": "Taxi Rebu",
   "description": "A barebones Java app, which can easily be deployed to Heroku.",
   "image": "heroku/java",
   "addons": [ "cleardb:ignite" ]

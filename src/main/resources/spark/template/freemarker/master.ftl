@@ -1,4 +1,4 @@
-<#macro title >Taxi Feik</#macro>
+<#macro title >Taxi Rebu</#macro>
 <#macro content></#macro>
 <#macro css></#macro>
 <#macro js></#macro>
@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="description" content="Taxi Erbu">
+    <meta name="description" content="Taxi Rebu">
     <meta name="author" content="Dalgom themes, info@dalgomcream.eu">
     <title><@title >    </@title></title>
     <link rel="shortcut icon" href="/images/favicon.png">

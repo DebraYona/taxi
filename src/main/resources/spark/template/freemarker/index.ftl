@@ -319,8 +319,8 @@
                         <div>
                             <img src="/images/driver02.jpg" alt="" class="person" />
                             <blockquote>
-                                Great job, Debra
-                                <footer>Jaime Pariona, Profesor</footer>
+                                Great job,
+                                <footer> Obama, Profesor</footer>
                             </blockquote>
                         </div>
                         <!--
@@ -362,6 +362,3 @@
 </div>
 </#macro>
 <@display_page />
-
-
-
